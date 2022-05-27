@@ -19,6 +19,9 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
+    'no-unused-expressions': ['error', { allowShortCircuit: true }],
+    '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true }],
+
     'vue/attributes-order': ['error', { alphabetical: true }],
     'vue/order-in-components': ['error'],
     // 闭合标签配置
