@@ -65,6 +65,8 @@ module.exports = {
         ignorePropertyModificationsFor: ['state'],
       },
     ],
+    // 允许短路表达式
+    'no-unused-expressions': ['error', { allowShortCircuit: true }],
     'array-bracket-spacing': ['error', 'never'],
     'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'block-spacing': ['error', 'always'],

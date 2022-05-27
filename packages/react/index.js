@@ -21,6 +21,7 @@ module.exports = {
     'react/forbid-prop-types': 'off',
     'react/sort-comp': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-no-undef': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-sort-props': [
       'error',
