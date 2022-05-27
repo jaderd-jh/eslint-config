@@ -53,7 +53,7 @@ module.exports = {
     // Common
     'semi': ['error', 'never'],
     'curly': ['error', 'multi-or-nest', 'consistent'],
-    'linebreak-style': ['error', 'unix'],
+    'linebreak-style': 'off',
     'quotes': ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
     'no-bitwise': ['error', { allow: ['~', '>>', '<<', '&', '|'] }],
