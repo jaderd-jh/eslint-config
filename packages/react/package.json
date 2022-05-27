@@ -1,0 +1,28 @@
+{
+  "name": "@jhqn/eslint-config-react",
+  "version": "0.0.0",
+  "description": "jhqn's eslint config for react",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "keywords": [
+    "jhqn",
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "jade-gjz",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@jhqn/eslint-config-ts": "workspace:*",
+    "eslint-plugin-mobx": "^0.0.8",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@jhqn/eslint-config-ts",
+  "version": "0.0.0",
+  "description": "jhqn's ESLint configuration for TypeScript",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "keywords": [
+    "jhqn",
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "jade-gjz",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@jhqn/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0"
+  }
+}
