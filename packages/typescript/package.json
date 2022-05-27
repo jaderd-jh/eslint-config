@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "jhqn's ESLint configuration for TypeScript",
   "main": "index.js",
   "files": [
