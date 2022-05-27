@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "@vue/eslint-config-typescript": "^10.0.0",
     "eslint-plugin-vue": "^9.0.1"
   }
 }

@@ -6,12 +6,19 @@ module.exports = {
      */
     'vue/setup-compiler-macros': true,
   },
+  parserOptions: {
+    parser: require.resolve('@typescript-eslint/parser'),
+    extraFileExtensions: ['.vue'],
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   extends: [
     'plugin:vue/vue3-recommended',
     '@jhqn/eslint-config-ts',
-    '@vue/typescript/recommended',
   ],
   rules: {
+    '@typescript-eslint/no-var-requires': 'off',
     'vue/attributes-order': ['error', { alphabetical: true }],
     'vue/order-in-components': ['error'],
     // 闭合标签配置
