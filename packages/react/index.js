@@ -38,5 +38,13 @@ module.exports = {
     ],
     'jsx-quotes': ['error', 'prefer-double'],
   },
-  ignorePatterns: ['**/*.vue'],
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'off',
+        'react-hooks/exhaustive-deps': 'off',
+      },
+    },
+  ],
 }
