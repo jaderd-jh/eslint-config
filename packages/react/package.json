@@ -2,6 +2,13 @@
   "name": "@jhqn/eslint-config-react",
   "version": "0.0.9",
   "description": "jhqn's eslint config for react",
+  "author": "jade-gjz",
+  "license": "MIT",
+  "keywords": [
+    "jhqn",
+    "eslint",
+    "eslint-config"
+  ],
   "main": "index.js",
   "files": [
     "*.js"
@@ -9,13 +16,6 @@
   "scripts": {
     "lint": "eslint . --config=index.js"
   },
-  "keywords": [
-    "jhqn",
-    "eslint",
-    "eslint-config"
-  ],
-  "author": "jade-gjz",
-  "license": "MIT",
   "peerDependencies": {
     "eslint": "^8.0.0"
   },

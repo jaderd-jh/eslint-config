@@ -1,17 +1,17 @@
 {
   "name": "@jhqn/eslint-config-monorepo",
   "version": "0.0.9",
-  "description": "jhqn's ESLint configs",
-  "main": "index.js",
-  "packageManager": "pnpm@7.1.6",
   "private": true,
+  "packageManager": "pnpm@7.1.6",
+  "description": "jhqn's ESLint configs",
+  "author": "jade-gjz",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
-  "keywords": [],
-  "author": "jade-gjz",
-  "license": "MIT",
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
     "bumpp": "^7.1.1",
