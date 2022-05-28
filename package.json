@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-monorepo",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "jhqn's ESLint configs",
   "main": "index.js",
   "packageManager": "pnpm@7.1.6",
