@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '@jhqn',
+  extends: '@jhqn/eslint-config-ts',
 }

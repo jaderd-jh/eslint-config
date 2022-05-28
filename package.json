@@ -13,7 +13,7 @@
   "author": "jade-gjz",
   "license": "MIT",
   "devDependencies": {
-    "@jhqn/eslint-config": "workspace:*",
+    "@jhqn/eslint-config-ts": "workspace:*",
     "bumpp": "^7.1.1",
     "eslint": "^8.16.0",
     "typescript": "^4.7.2"
