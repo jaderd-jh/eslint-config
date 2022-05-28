@@ -1,8 +1,10 @@
 module.exports = {
-  extends: ['plugin:react/recommended', '@jhqn/eslint-config-ts'],
-  plugins: ['react', 'mobx', 'react-hooks'],
+  extends: ['@jhqn/eslint-config-ts', 'plugin:react/recommended'],
+  plugins: ['react', 'react-hooks', 'mobx'],
   rules: {
     'mobx/missing-observer': 'off',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Checks deps of Hooks
     'react/display-name': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/state-in-constructor': 'off',
@@ -12,8 +14,6 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/jsx-filename-extension': 'off',
     'react/no-array-index-key': 'warn',
-    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    'react-hooks/exhaustive-deps': 'warn', // Checks deps of Hooks
     'react/require-default-props': 'off',
     'react/jsx-fragments': 'off',
     'react/jsx-wrap-multilines': 'off',
@@ -36,6 +36,12 @@ module.exports = {
         locale: 'auto',
       },
     ],
+    'react/jsx-closing-bracket-location': ['error', { selfClosing: 'after-props' }],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
     'jsx-quotes': ['error', 'prefer-double'],
   },
 }
