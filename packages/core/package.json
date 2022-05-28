@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "jhqn's eslint config",
   "main": "index.js",
   "files": [
