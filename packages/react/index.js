@@ -38,4 +38,5 @@ module.exports = {
     ],
     'jsx-quotes': ['error', 'prefer-double'],
   },
+  ignorePatterns: ['**/*.vue'],
 }
