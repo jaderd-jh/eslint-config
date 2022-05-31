@@ -34,17 +34,6 @@ module.exports = {
         math: 'always',
       },
     ],
-    // 'vue/html-indent': [
-    //   'error',
-    //   2,
-    //   {
-    //     attribute: 1,
-    //     baseIndent: 1,
-    //     closeBracket: 0,
-    //     alignAttributesVertically: true,
-    //     ignores: [],
-    //   },
-    // ],
     'vue/max-attributes-per-line': 'off',
     'vue/no-v-html': 'off',
     'vue/require-prop-types': 'off',
@@ -104,7 +93,6 @@ module.exports = {
     'vue/array-bracket-spacing': ['error', 'never'],
     'vue/arrow-spacing': ['error', { before: true, after: true }],
     'vue/block-spacing': ['error', 'always'],
-    // 'vue/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'vue/comma-dangle': ['error', 'always-multiline'],
     'vue/comma-spacing': ['error', { before: false, after: true }],
     'vue/comma-style': ['error', 'last'],
@@ -132,18 +120,8 @@ module.exports = {
         avoidQuotes: true,
       },
     ],
-    // 'vue/operator-linebreak': ['error', 'after'],
     'vue/prefer-template': 'error',
     'vue/quote-props': ['error', 'consistent-as-needed'],
-    // 'vue/script-indent': [
-    //   'error',
-    //   2,
-    //   {
-    //     baseIndent: 1,
-    //     switchCase: 0,
-    //     ignores: [],
-    //   },
-    // ],
     'vue/space-in-parens': ['error', 'never'],
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],
@@ -154,23 +132,6 @@ module.exports = {
       {
         disallowVueBuiltInComponents: true,
         disallowVue3BuiltInComponents: true,
-      },
-    ],
-
-    'prettier/prettier': [
-      'error',
-      {
-        // Override all options of `prettier` here
-        // @see https://prettier.io/docs/en/options.html
-        printWidth: 120,
-        arrowParens: 'avoid',
-        quoteProps: 'consistent',
-        endOfLine: 'lf',
-        semi: false,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false,
-        vueIndentScriptAndStyle: true,
       },
     ],
   },

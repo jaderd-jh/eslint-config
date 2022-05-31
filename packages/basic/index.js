@@ -28,7 +28,7 @@ module.exports = {
     'plugin:markdown/recommended',
     'prettier',
   ],
-  plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise', 'prettier'],
+  plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
   settings: {
     'import/resolver': {
       node: {
@@ -66,7 +66,6 @@ module.exports = {
       },
     ],
     'array-bracket-spacing': ['error', 'never'],
-    // 'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'block-spacing': ['error', 'always'],
     'camelcase': 'off',
     'comma-spacing': ['error', { before: false, after: true }],
@@ -78,7 +77,6 @@ module.exports = {
     'no-cond-assign': ['error', 'always'],
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    // 'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
@@ -156,7 +154,6 @@ module.exports = {
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    // 'operator-linebreak': ['error', 'after'],
 
     // unicorns
     // Pass error message when throwing errors
@@ -206,24 +203,6 @@ module.exports = {
 
     // compat
     'ecmascript-compat/compat': 'warn',
-
-    // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        // Override all options of `prettier` here
-        // @see https://prettier.io/docs/en/options.html
-        printWidth: 120,
-        arrowParens: 'avoid',
-        quoteProps: 'consistent',
-        endOfLine: 'lf',
-        semi: false,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false,
-        vueIndentScriptAndStyle: true,
-      },
-    ],
   },
   ignorePatterns: [
     '*.min.*',

@@ -29,6 +29,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-undef': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'react/no-unescaped-entities': 'off',
     'react/jsx-sort-props': [
       'error',
       {
@@ -46,25 +47,6 @@ module.exports = {
     'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
-    // 'react/jsx-indent': ['error', 2],
-    // 'react/jsx-indent-props': ['error', 2],
     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
-
-    'prettier/prettier': [
-      'error',
-      {
-        // Override all options of `prettier` here
-        // @see https://prettier.io/docs/en/options.html
-        printWidth: 120,
-        arrowParens: 'avoid',
-        quoteProps: 'consistent',
-        endOfLine: 'lf',
-        semi: false,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false,
-        vueIndentScriptAndStyle: true,
-      },
-    ],
   },
 }
