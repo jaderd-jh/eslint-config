@@ -109,6 +109,8 @@ module.exports = {
     // 允许短路表达式
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
     '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true }],
+    'no-undef': 'off',
+    '@typescript-eslint/no-undef': 'off',
     // The following rule overrides require a parser service, aka. require a `typescript.json` path.
     // This needs to be done individually for each project, and it slows down linting significantly.
     // 'no-throw-literal': 'off',
