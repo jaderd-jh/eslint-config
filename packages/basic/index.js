@@ -28,7 +28,7 @@ module.exports = {
     'plugin:markdown/recommended',
     'prettier',
   ],
-  plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
+  plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise', 'prettier'],
   settings: {
     'import/resolver': {
       node: {
@@ -218,6 +218,24 @@ module.exports = {
 
     // compat
     'ecmascript-compat/compat': 'warn',
+
+    // prettier
+    'prettier/prettier': [
+      'error',
+      {
+        // Override all options of `prettier` here
+        // @see https://prettier.io/docs/en/options.html
+        printWidth: 120,
+        arrowParens: 'avoid',
+        quoteProps: 'consistent',
+        endOfLine: 'lf',
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'all',
+        useTabs: false,
+        vueIndentScriptAndStyle: true,
+      },
+    ],
   },
   ignorePatterns: [
     '*.min.*',

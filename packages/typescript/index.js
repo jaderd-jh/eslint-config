@@ -2,9 +2,9 @@ const basic = require('@jhqn/eslint-config-basic')
 
 module.exports = {
   extends: [
-    '@jhqn/eslint-config-basic',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
+    '@jhqn/eslint-config-basic',
   ],
   plugins: ['@typescript-eslint'],
   settings: {

@@ -13,10 +13,7 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    '@jhqn/eslint-config-ts',
-  ],
+  extends: ['plugin:vue/vue3-recommended', '@jhqn/eslint-config-ts'],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
@@ -160,6 +157,22 @@ module.exports = {
       {
         disallowVueBuiltInComponents: true,
         disallowVue3BuiltInComponents: true,
+      },
+    ],
+    'prettier-vue/prettier': [
+      'error',
+      {
+        // Override all options of `prettier` here
+        // @see https://prettier.io/docs/en/options.html
+        printWidth: 120,
+        arrowParens: 'avoid',
+        quoteProps: 'consistent',
+        endOfLine: 'lf',
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'all',
+        useTabs: false,
+        vueIndentScriptAndStyle: true,
       },
     ],
   },
