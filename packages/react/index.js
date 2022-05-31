@@ -42,7 +42,7 @@ module.exports = {
         locale: 'auto',
       },
     ],
-    'react/jsx-closing-tag-location': 'error',
+    'react/jsx-closing-tag-location': 'off',
     'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
