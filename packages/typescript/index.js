@@ -12,13 +12,6 @@ module.exports = {
   rules: {
     // JS
     'import/named': 'off',
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: ['state'],
-      },
-    ],
 
     // TS
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
