@@ -8,9 +8,18 @@ module.exports = {
     // mobx
     'mobx/missing-observer': 'off',
 
-    // react
+    // react-hooks
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks deps of Hooks
+
+    // react
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true,
+      },
+    ],
     'react/display-name': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/state-in-constructor': 'off',
