@@ -25,7 +25,8 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-useless-constructor': 'off',
-    // 'indent': 'off',
+    'indent': 'off',
+    '@typescript-eslint/indent': 'off',
     // '@typescript-eslint/indent': [
     //   'error',
     //   2,
@@ -143,7 +144,7 @@ module.exports = {
         printWidth: 120,
         arrowParens: 'avoid',
         quoteProps: 'consistent',
-        endOfLine: 'lf',
+        endOfLine: 'auto',
         semi: false,
         singleQuote: true,
         trailingComma: 'all',

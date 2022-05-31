@@ -156,7 +156,7 @@ module.exports = {
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    'operator-linebreak': ['error', 'after'],
+    // 'operator-linebreak': ['error', 'after'],
 
     // unicorns
     // Pass error message when throwing errors
@@ -216,7 +216,7 @@ module.exports = {
         printWidth: 120,
         arrowParens: 'avoid',
         quoteProps: 'consistent',
-        endOfLine: 'lf',
+        endOfLine: 'auto',
         semi: false,
         singleQuote: true,
         trailingComma: 'all',
