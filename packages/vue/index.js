@@ -34,13 +34,17 @@ module.exports = {
         math: 'always',
       },
     ],
-    'vue/html-indent': ['error', 2, {
-      attribute: 1,
-      baseIndent: 1,
-      closeBracket: 0,
-      alignAttributesVertically: true,
-      ignores: [],
-    }],
+    'vue/html-indent': [
+      'error',
+      2,
+      {
+        attribute: 1,
+        baseIndent: 1,
+        closeBracket: 0,
+        alignAttributesVertically: true,
+        ignores: [],
+      },
+    ],
     'vue/max-attributes-per-line': 'off',
     'vue/no-v-html': 'off',
     'vue/require-prop-types': 'off',
@@ -115,22 +119,11 @@ module.exports = {
     'vue/no-extra-parens': ['error', 'functions'],
     'vue/no-irregular-whitespace': 'error',
     'vue/no-loss-of-precision': 'error',
-    'vue/no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'vue/no-sparse-arrays': 'error',
-    'vue/object-curly-newline': [
-      'error',
-      { multiline: true, consistent: true },
-    ],
+    'vue/object-curly-newline': ['error', { multiline: true, consistent: true }],
     'vue/object-curly-spacing': ['error', 'always'],
-    'vue/object-property-newline': [
-      'error',
-      { allowMultiplePropertiesPerLine: true },
-    ],
+    'vue/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
     'vue/object-shorthand': [
       'error',
       'always',
@@ -142,11 +135,15 @@ module.exports = {
     'vue/operator-linebreak': ['error', 'before'],
     'vue/prefer-template': 'error',
     'vue/quote-props': ['error', 'consistent-as-needed'],
-    'vue/script-indent': ['error', 2, {
-      baseIndent: 1,
-      switchCase: 0,
-      ignores: [],
-    }],
+    'vue/script-indent': [
+      'error',
+      2,
+      {
+        baseIndent: 1,
+        switchCase: 0,
+        ignores: [],
+      },
+    ],
     'vue/space-in-parens': ['error', 'never'],
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],
@@ -159,7 +156,8 @@ module.exports = {
         disallowVue3BuiltInComponents: true,
       },
     ],
-    'prettier-vue/prettier': [
+
+    'prettier/prettier': [
       'error',
       {
         // Override all options of `prettier` here

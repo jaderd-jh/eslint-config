@@ -1,11 +1,7 @@
 const basic = require('@jhqn/eslint-config-basic')
 
 module.exports = {
-  extends: [
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-    '@jhqn/eslint-config-basic',
-  ],
+  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', '@jhqn/eslint-config-basic'],
   plugins: ['@typescript-eslint'],
   settings: {
     'import/resolver': {
@@ -17,19 +13,10 @@ module.exports = {
     'import/named': 'off',
 
     // TS
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      { 'ts-ignore': 'allow-with-description' },
-    ],
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      { multiline: { delimiter: 'none' } },
-    ],
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+    '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/type-annotation-spacing': ['error', {}],
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', disallowTypeAnnotations: false },
-    ],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
@@ -83,16 +70,9 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true },
-    ],
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'brace-style': 'off',
-    '@typescript-eslint/brace-style': [
-      'error',
-      'stroustrup',
-      { allowSingleLine: true },
-    ],
+    '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     'object-curly-spacing': 'off',
@@ -115,15 +95,9 @@ module.exports = {
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
     'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': [
-      'error',
-      { before: true, after: true },
-    ],
+    '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
     'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': [
-      'error',
-      { before: false, after: true },
-    ],
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': ['error', 'functions'],
     'no-dupe-class-members': 'off',
@@ -131,11 +105,7 @@ module.exports = {
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
     'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     // 允许短路表达式
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
     '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true }],
@@ -162,5 +132,22 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+
+    'prettier/prettier': [
+      'error',
+      {
+        // Override all options of `prettier` here
+        // @see https://prettier.io/docs/en/options.html
+        printWidth: 120,
+        arrowParens: 'avoid',
+        quoteProps: 'consistent',
+        endOfLine: 'lf',
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'all',
+        useTabs: false,
+        vueIndentScriptAndStyle: true,
+      },
+    ],
   },
 }
