@@ -57,7 +57,7 @@ module.exports = {
     'quote-props': ['error', 'consistent-as-needed'],
     'no-bitwise': ['error', { allow: ['~', '>>', '<<', '&', '|'] }],
     'no-unused-vars': 'warn',
-    'no-param-reassign': 'off',
+    'no-param-reassign': ['error', { props: false }],
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'always'],
     'camelcase': 'off',
