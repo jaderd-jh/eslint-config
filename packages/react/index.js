@@ -2,7 +2,13 @@ module.exports = {
   extends: ['@jhqn/eslint-config-ts', 'plugin:react/recommended'],
   plugins: ['react', 'react-hooks', 'mobx'],
   rules: {
+    // jsx
+    'jsx-quotes': ['error', 'prefer-double'],
+
+    // mobx
     'mobx/missing-observer': 'off',
+
+    // react
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks deps of Hooks
     'react/display-name': 'off',
@@ -36,12 +42,12 @@ module.exports = {
         locale: 'auto',
       },
     ],
-    'react/jsx-closing-bracket-location': ['error', { selfClosing: 'after-props' }],
+    'react/jsx-closing-tag-location': 'error',
+    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
-    'jsx-quotes': ['error', 'prefer-double'],
   },
 }
