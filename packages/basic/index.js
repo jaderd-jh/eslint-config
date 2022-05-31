@@ -26,7 +26,7 @@ module.exports = {
     'plugin:jsonc/prettier',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
   settings: {
@@ -70,7 +70,6 @@ module.exports = {
     'camelcase': 'off',
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
-    'comma-dangle': ['error', 'always-multiline'],
     'no-constant-condition': 'warn',
     'no-debugger': 'error',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -203,6 +202,24 @@ module.exports = {
 
     // compat
     'ecmascript-compat/compat': 'warn',
+
+    // prettier
+    'prettier/prettier': [
+      'error',
+      {
+        // Override all options of `prettier` here
+        // @see https://prettier.io/docs/en/options.html
+        printWidth: 120,
+        arrowParens: 'avoid',
+        quoteProps: 'consistent',
+        endOfLine: 'lf',
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'es5',
+        useTabs: false,
+        vueIndentScriptAndStyle: true,
+      },
+    ],
   },
   ignorePatterns: [
     '*.min.*',
