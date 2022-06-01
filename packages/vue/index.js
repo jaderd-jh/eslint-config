@@ -13,7 +13,7 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ['plugin:vue/vue3-recommended', '@jhqn/eslint-config-ts'],
+  extends: ['plugin:vue/vue3-recommended', '@jhqn/eslint-config-ts', 'plugin:prettier-vue/recommended'],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
@@ -133,6 +133,25 @@ module.exports = {
         disallowVue3BuiltInComponents: true,
       },
     ],
+
+    // prettier
+    'prettier/prettier': 'off',
+    'prettier-vue/prettier': [
+      'error',
+      {
+        // Override all options of `prettier` here
+        // @see https://prettier.io/docs/en/options.html
+        printWidth: 120,
+        arrowParens: 'avoid',
+        quoteProps: 'consistent',
+        endOfLine: 'lf',
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'es5',
+        useTabs: false,
+        vueIndentScriptAndStyle: true,
+      },
+    ],
   },
   overrides: [
     {
@@ -151,4 +170,11 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'prettier-vue': {
+      SFCBlocks: {
+        style: false,
+      },
+    },
+  },
 }

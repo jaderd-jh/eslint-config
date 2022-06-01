@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
+    "eslint-plugin-prettier-vue": "^3.1.0",
     "eslint-plugin-vue": "^9.0.1"
   }
 }
