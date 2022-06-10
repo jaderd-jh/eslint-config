@@ -1,3 +1,12 @@
+## [0.0.29](https://github.com/jaderd-jh/eslint-config/compare/v0.0.28...v0.0.29) (2022-06-10)
+
+
+### Bug Fixes
+
+* adjust prettier/prettier `endOfLine` to `auto` ([9ddbfc7](https://github.com/jaderd-jh/eslint-config/commit/9ddbfc7b1c3f60bba86843a8af3cbdfdb34e562a))
+
+
+
 ## [0.0.28](https://github.com/jaderd-jh/eslint-config/compare/v0.0.27...v0.0.28) (2022-06-01)
 
 
