@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-ts",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "jhqn's ESLint configuration for TypeScript",
   "author": "jade-gjz",
   "license": "MIT",
