@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint .",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
-    "postpublish": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md && git commit -am \"chore(docs): update CAHNGELOG.md\" && git push"
+    "postpublish": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2 && git add CHANGELOG.md && git commit -am \"chore(docs): update CAHNGELOG.md\" && git push"
   },
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
