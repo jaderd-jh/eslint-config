@@ -1,3 +1,15 @@
+## [0.0.31](https://github.com/jaderd-jh/eslint-config/compare/v0.0.30...v0.0.31) (2022-07-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-html to v7 ([#15](https://github.com/jaderd-jh/eslint-config/issues/15)) ([76c13f9](https://github.com/jaderd-jh/eslint-config/commit/76c13f93088206254cfc241c02ca73cfc38472b7))
+* **deps:** update dependency eslint-plugin-markdown to v3 ([#14](https://github.com/jaderd-jh/eslint-config/issues/14)) ([cb3cc9e](https://github.com/jaderd-jh/eslint-config/commit/cb3cc9e2db2f927b25f0bfbd4ea20103c6371fdf))
+* **deps:** update dependency eslint-plugin-mobx to ^0.0.9 ([#12](https://github.com/jaderd-jh/eslint-config/issues/12)) ([2a0855c](https://github.com/jaderd-jh/eslint-config/commit/2a0855c47e1e80c034d4a9e75ac3c7eec0e15566))
+* **deps:** update dependency eslint-plugin-unicorn to v43 ([#11](https://github.com/jaderd-jh/eslint-config/issues/11)) ([a6760a7](https://github.com/jaderd-jh/eslint-config/commit/a6760a7f56f536c6bf41e6480c1488c97a8f165d))
+
+
+
 ## [0.0.30](https://github.com/jaderd-jh/eslint-config/compare/v0.0.29...v0.0.30) (2022-06-10)
 
 
