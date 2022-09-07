@@ -65,7 +65,7 @@ module.exports = {
         /**
          * 允许使用 kebab-case 命名方式 的组件库 vant | element-plus
          */
-        ignores: ['/^van-/', '/^el-/'],
+        ignores: ['/^van-/', '/^el-/', 'component', 'slot'],
       },
     ],
     'vue/component-options-name-casing': ['error', 'PascalCase'],
