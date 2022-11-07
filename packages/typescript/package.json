@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@jhqn/eslint-config-basic": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2"
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0"
   }
 }
