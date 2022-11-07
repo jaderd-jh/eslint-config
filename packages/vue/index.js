@@ -133,6 +133,7 @@ module.exports = {
         disallowVue3BuiltInComponents: true,
       },
     ],
+    'vue/v-on-handler-style': ['error', ['method', 'inline-function'], { ignoreIncludesComment: false }],
 
     // prettier
     'prettier/prettier': 'off',
