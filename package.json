@@ -2,7 +2,7 @@
   "name": "@jhqn/eslint-config-monorepo",
   "version": "0.1.4",
   "private": true,
-  "packageManager": "pnpm@7.13.5",
+  "packageManager": "pnpm@7.15.0",
   "description": "jhqn's ESLint configs",
   "author": "jade-gjz",
   "license": "MIT",
