@@ -18,6 +18,7 @@ module.exports = {
     'eslint-config-airbnb-base',
     'eslint:recommended',
     'plugin:import/recommended',
+    'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:ecmascript-compat/recommended',
     'plugin:compat/recommended',
