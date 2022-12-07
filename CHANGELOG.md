@@ -1,3 +1,7 @@
+## [0.2.2](https://github.com/jaderd-jh/eslint-config/compare/v0.2.1...v0.2.2) (2022-12-07)
+
+
+
 ## [0.0.31](https://github.com/jaderd-jh/eslint-config/compare/v0.0.30...v0.0.31) (2022-07-19)
 
 
