@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "update": "pnpm up -i --latest -r",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "postpublish": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2 && git add CHANGELOG.md && git commit -am \"chore(docs): update CAHNGELOG.md\" && git push"
   },
@@ -16,7 +17,14 @@
     "@jhqn/eslint-config-ts": "workspace:*",
     "bumpp": "^8.0.0",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "typescript": "^4.9.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint"
+      ]
+    }
   }
 }

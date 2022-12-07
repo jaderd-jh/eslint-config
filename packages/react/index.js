@@ -1,12 +1,16 @@
 module.exports = {
   extends: ['plugin:react/recommended', '@jhqn/eslint-config-ts'],
-  plugins: ['react', 'react-hooks', 'mobx'],
+  plugins: ['react', 'react-hooks', 'mobx', 'valtio'],
   rules: {
     // jsx
     'jsx-quotes': ['error', 'prefer-double'],
 
     // mobx
     'mobx/missing-observer': 'off',
+
+    // valtio
+    'valtio/state-snapshot-rule': 'warn',
+    'valtio/avoid-this-in-proxy': 'warn',
 
     // react-hooks
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
