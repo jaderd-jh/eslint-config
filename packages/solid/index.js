@@ -1,5 +1,7 @@
+const ts = require('@jhqn/eslint-config-ts')
+
 module.exports = {
-  extends: ['@jhqn/eslint-config-ts', 'plugin:solid/typescript'],
+  extends: ['plugin:solid/typescript', '@jhqn/eslint-config-ts'],
   plugins: ['react', 'solid'],
   rules: {
     'solid/destructuring-assignment': 0,
@@ -37,4 +39,5 @@ module.exports = {
     'react/jsx-no-target-blank': 2,
     'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
   },
+  overrides: ts.overrides,
 }

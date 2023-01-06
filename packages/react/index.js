@@ -1,3 +1,5 @@
+const ts = require('@jhqn/eslint-config-ts')
+
 module.exports = {
   extends: ['plugin:react/recommended', '@jhqn/eslint-config-ts'],
   plugins: ['react', 'react-hooks', 'mobx', 'valtio'],
@@ -63,4 +65,5 @@ module.exports = {
     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
     'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
   },
+  overrides: ts.overrides,
 }

@@ -1,3 +1,5 @@
+const ts = require('@jhqn/eslint-config-ts')
+
 module.exports = {
   env: {
     /**
@@ -154,6 +156,7 @@ module.exports = {
     ],
   },
   overrides: [
+    ...ts.overrides,
     {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
