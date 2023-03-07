@@ -80,11 +80,11 @@ importers:
     specifiers:
       '@jhqn/eslint-config-ts': workspace:*
       eslint-plugin-react: ^7.32.2
-      eslint-plugin-solid: ^0.9.4
+      eslint-plugin-solid: ^0.11.0
     dependencies:
       '@jhqn/eslint-config-ts': link:../typescript
       eslint-plugin-react: 7.32.2
-      eslint-plugin-solid: 0.9.4
+      eslint-plugin-solid: 0.11.0
 
   packages/typescript:
     specifiers:
@@ -1684,8 +1684,8 @@ packages:
       scslre: 0.1.6
     dev: false
 
-  /eslint-plugin-solid/0.9.4:
-    resolution: {integrity: sha512-AGS7XnkepV2jiFwBMSg3FW7GKe6uJwgx65nnRC7I6s0dbV7rGpouwj9KDkXV5NJHQENxACeOLUTgjyMi3JeHNw==}
+  /eslint-plugin-solid/0.11.0:
+    resolution: {integrity: sha512-3ve6IpEtl8nOvJnjaJACqlBmv449l6dMMhMczjQWvvLlRqkzLemgsJ9H+Isu8GLSBTNxDIm5oSKx/lO2j8vKbA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
