@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.0"
   },
   "dependencies": {
     "@jhqn/eslint-config-basic": "workspace:*",
