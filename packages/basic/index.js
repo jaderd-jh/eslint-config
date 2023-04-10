@@ -216,6 +216,9 @@ module.exports = {
         vueIndentScriptAndStyle: true,
       },
     ],
+
+    // unocss
+    '@unocss/order-attributify': 'off',
   },
   ignorePatterns: [
     '*.min.*',
