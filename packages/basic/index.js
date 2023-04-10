@@ -28,6 +28,7 @@ module.exports = {
     'plugin:yml/standard',
     'plugin:markdown/recommended',
     'plugin:prettier/recommended',
+    '@unocss',
   ],
   plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
   settings: {
