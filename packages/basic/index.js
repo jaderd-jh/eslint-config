@@ -335,6 +335,7 @@ module.exports = {
       files: ['scripts/**/*.*', 'cli.*'],
       rules: {
         'no-console': 'off',
+        'no-underscore-dangle': 'off',
       },
     },
     {
