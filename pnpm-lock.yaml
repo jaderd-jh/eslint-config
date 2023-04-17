@@ -25,6 +25,9 @@ importers:
       '@unocss/eslint-config':
         specifier: ^0.51.2
         version: 0.51.2(eslint@8.37.0)(typescript@5.0.3)
+      eslint:
+        specifier: ^8.0.0
+        version: 8.37.0
       eslint-config-airbnb-base:
         specifier: ^15.0.0
         version: 15.0.0(eslint-plugin-import@2.27.5)(eslint@8.37.0)
@@ -50,8 +53,8 @@ importers:
         specifier: ^2.27.5
         version: 2.27.5(eslint@8.37.0)
       eslint-plugin-jsdoc:
-        specifier: ^40.1.1
-        version: 40.1.1(eslint@8.37.0)
+        specifier: ^41.0.0
+        version: 41.0.0(eslint@8.37.0)
       eslint-plugin-jsonc:
         specifier: ^2.7.0
         version: 2.7.0(eslint@8.37.0)
@@ -1710,8 +1713,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-jsdoc@40.1.1(eslint@8.37.0):
-    resolution: {integrity: sha512-KxrQCq9pPt7LNeDBlLlnuJMpDFZnEQTs4e25NrT4u5cWmPw2P7F03F2qwPz0GMdlRZTyMOofuPAdiWytvPubvA==}
+  /eslint-plugin-jsdoc@41.0.0(eslint@8.37.0):
+    resolution: {integrity: sha512-1diUsqS881pGCksfcZNs9L5fboYtUJTsvlfc/01MH5Qk6Otpw9u5ngN7HlaPykBKxYpG8WI+SoCPbNBNbkZM8g==}
     engines: {node: ^14 || ^16 || ^17 || ^18 || ^19}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -3758,7 +3761,7 @@ packages:
     resolution: {integrity: sha512-cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==}
     dependencies:
       spdx-expression-parse: 3.0.1
-      spdx-license-ids: 3.0.12
+      spdx-license-ids: 3.0.13
 
   /spdx-exceptions@2.3.0:
     resolution: {integrity: sha512-/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==}
@@ -3768,9 +3771,6 @@ packages:
     dependencies:
       spdx-exceptions: 2.3.0
       spdx-license-ids: 3.0.13
-
-  /spdx-license-ids@3.0.12:
-    resolution: {integrity: sha512-rr+VVSXtRhO4OHbXUiAF7xW3Bo9DuuF6C5jH+q/x15j2jniycgKbxU09Hr0WqlSLUs4i4ltHGXqTe7VHclYWyA==}
 
   /spdx-license-ids@3.0.13:
     resolution: {integrity: sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==}
