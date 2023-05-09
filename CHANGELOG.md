@@ -1,3 +1,12 @@
+## [0.4.5](https://github.com/jaderd-jh/eslint-config/compare/v0.4.4...v0.4.5) (2023-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jsdoc to v43 ([#29](https://github.com/jaderd-jh/eslint-config/issues/29)) ([a5ded41](https://github.com/jaderd-jh/eslint-config/commit/a5ded4100a56b625d050e3d6f90661523738dd99))
+
+
+
 ## [0.4.4](https://github.com/jaderd-jh/eslint-config/compare/v0.4.3...v0.4.4) (2023-04-11)
 
 
