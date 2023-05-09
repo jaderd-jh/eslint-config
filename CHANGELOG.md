@@ -1,4 +1,125 @@
+## [0.4.4](https://github.com/jaderd-jh/eslint-config/compare/v0.4.3...v0.4.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* turn off `no-underscore-dangle` for scripts and cli files ([e372aaf](https://github.com/jaderd-jh/eslint-config/commit/e372aaf378907de28ccfd260ebd0a9217301c551))
+
+
+
+## [0.4.3](https://github.com/jaderd-jh/eslint-config/compare/v0.4.2...v0.4.3) (2023-04-10)
+
+
+### Bug Fixes
+
+* turn off `order-attributify` ([24dafa9](https://github.com/jaderd-jh/eslint-config/commit/24dafa9685688e1e600a82a05d28e0b6b8c42a91))
+
+
+
+## [0.4.2](https://github.com/jaderd-jh/eslint-config/compare/v0.4.1...v0.4.2) (2023-04-10)
+
+
+### Bug Fixes
+
+* extends @unocss/eslint-config recommended config ([7a646ec](https://github.com/jaderd-jh/eslint-config/commit/7a646ece51243d1f0fefad5245cbb85ae8685ce8))
+
+
+
+## [0.4.1](https://github.com/jaderd-jh/eslint-config/compare/v0.4.0...v0.4.1) (2023-04-10)
+
+
+### Features
+
+* add @unocss/eslint-config ([5134dfe](https://github.com/jaderd-jh/eslint-config/commit/5134dfed4023be05a9da9e17917058381c391ba4))
+
+
+
+# [0.4.0](https://github.com/jaderd-jh/eslint-config/compare/v0.3.2...v0.4.0) (2023-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-solid to ^0.11.0 ([#24](https://github.com/jaderd-jh/eslint-config/issues/24)) ([f0f7e56](https://github.com/jaderd-jh/eslint-config/commit/f0f7e56b62dd259b019cd2e9d09f1b2b2dc4b661))
+* **deps:** update dependency eslint-plugin-unicorn to v46 ([#26](https://github.com/jaderd-jh/eslint-config/issues/26)) ([477bd33](https://github.com/jaderd-jh/eslint-config/commit/477bd338e4955cadd831a901d142fc288cf77a18))
+
+
+
+## [0.3.2](https://github.com/jaderd-jh/eslint-config/compare/v0.3.1...v0.3.2) (2023-02-09)
+
+
+
+## [0.3.1](https://github.com/jaderd-jh/eslint-config/compare/v0.3.0...v0.3.1) (2023-01-06)
+
+
+### Bug Fixes
+
+* inherit overrides ([e0b2cbe](https://github.com/jaderd-jh/eslint-config/commit/e0b2cbe115f35678b6819221c308bc2428b2fa3a))
+
+
+### Reverts
+
+* Revert "ci: move postpublish script to packages" ([7b08fd3](https://github.com/jaderd-jh/eslint-config/commit/7b08fd32a78e05effcbcbb0d9d64210ecaa1cd0f))
+
+
+
+# [0.3.0](https://github.com/jaderd-jh/eslint-config/compare/v0.2.2...v0.3.0) (2023-01-06)
+
+
+
 ## [0.2.2](https://github.com/jaderd-jh/eslint-config/compare/v0.2.1...v0.2.2) (2022-12-07)
+
+
+
+## [0.2.1](https://github.com/jaderd-jh/eslint-config/compare/v0.2.0...v0.2.1) (2022-11-24)
+
+
+
+# [0.2.0](https://github.com/jaderd-jh/eslint-config/compare/v0.1.4...v0.2.0) (2022-11-11)
+
+
+### Features
+
+* **basic:** add `eslint-plugin-regexp` ([df563a3](https://github.com/jaderd-jh/eslint-config/commit/df563a38fb9ace82fd1bb078081be4bf99657f3a))
+
+
+
+## [0.1.4](https://github.com/jaderd-jh/eslint-config/compare/v0.1.3...v0.1.4) (2022-11-07)
+
+
+### Reverts
+
+* Revert "feat(vue): add `vue/v-on-handler-style` rule" ([7f70478](https://github.com/jaderd-jh/eslint-config/commit/7f70478d143ec7a35969ff8195fe78c16310f22f))
+
+
+
+## [0.1.3](https://github.com/jaderd-jh/eslint-config/compare/v0.1.2...v0.1.3) (2022-11-07)
+
+
+### Features
+
+* **vue:** add `vue/v-on-handler-style` rule ([416f877](https://github.com/jaderd-jh/eslint-config/commit/416f87762641a93efe22c0dec2533c305017a7be))
+
+
+
+## [0.1.2](https://github.com/jaderd-jh/eslint-config/compare/v0.1.1...v0.1.2) (2022-11-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-unicorn to v44 ([#19](https://github.com/jaderd-jh/eslint-config/issues/19)) ([38f59e0](https://github.com/jaderd-jh/eslint-config/commit/38f59e07eeff5b84cc7240c21d65f1a89497e6a5))
+
+
+
+## [0.1.1](https://github.com/jaderd-jh/eslint-config/compare/v0.1.0...v0.1.1) (2022-09-07)
+
+
+### Bug Fixes
+
+* adjust `vue/component-name-in-template-casing`:ignore component & slot ([77d2a90](https://github.com/jaderd-jh/eslint-config/commit/77d2a90c2466e9ba15893093aa498c5aa458a3ad))
+
+
+
+# [0.1.0](https://github.com/jaderd-jh/eslint-config/compare/v0.0.31...v0.1.0) (2022-09-07)
 
 
 
