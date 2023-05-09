@@ -23,6 +23,8 @@ module.exports = {
     '@typescript-eslint/prefer-ts-expect-error': 'error',
 
     // Override JS
+    'default-param-last': 'off',
+    'typescript-eslint/default-param-last': 'error',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-useless-constructor': 'off',
