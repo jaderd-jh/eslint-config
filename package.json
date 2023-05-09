@@ -17,8 +17,8 @@
     "@jhqn/eslint-config-ts": "workspace:*",
     "bumpp": "^9.1.0",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.37.0",
-    "typescript": "^5.0.3"
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4"
   },
   "pnpm": {
     "peerDependencyRules": {
