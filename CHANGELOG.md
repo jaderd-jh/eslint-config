@@ -1,3 +1,22 @@
+## [0.4.7](https://github.com/jaderd-jh/eslint-config/compare/v0.4.6...v0.4.7) (2023-05-09)
+
+
+### Bug Fixes
+
+* **typescript:** override rule `default-param-last` ([0ec47a7](https://github.com/jaderd-jh/eslint-config/commit/0ec47a7701bff45c543c0727a40f3361a8d4401b))
+
+
+
+## [0.4.6](https://github.com/jaderd-jh/eslint-config/compare/v0.4.5...v0.4.6) (2023-05-09)
+
+
+### Bug Fixes
+
+* postpublish ([fbd9db2](https://github.com/jaderd-jh/eslint-config/commit/fbd9db2254a45a09463051075c027e5e2eb12443))
+* **typescript:** override rule `default-param-last` ([6494cd4](https://github.com/jaderd-jh/eslint-config/commit/6494cd40a63694d045ab7d37e2b1347252520979))
+
+
+
 ## [0.4.5](https://github.com/jaderd-jh/eslint-config/compare/v0.4.4...v0.4.5) (2023-05-09)
 
 
