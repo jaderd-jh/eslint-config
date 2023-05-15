@@ -1,3 +1,12 @@
+## [0.4.8](https://github.com/jaderd-jh/eslint-config/compare/v0.4.7...v0.4.8) (2023-05-15)
+
+
+### Bug Fixes
+
+* **vue:** enable `shallowOnly` for `vue/no-mutating-props` ([d7e8340](https://github.com/jaderd-jh/eslint-config/commit/d7e83405757a0e054a92fdea004559d8a26d6ec7))
+
+
+
 ## [0.4.7](https://github.com/jaderd-jh/eslint-config/compare/v0.4.6...v0.4.7) (2023-05-09)
 
 
