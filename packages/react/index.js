@@ -1,7 +1,7 @@
 const ts = require('@jhqn/eslint-config-ts')
 
 module.exports = {
-  extends: ['plugin:react/recommended', '@jhqn/eslint-config-ts'],
+  extends: ['plugin:react/recommended', '@jhqn/eslint-config-ts', 'plugin:@unocss/recommended'],
   plugins: ['react', 'react-hooks', 'mobx', 'valtio'],
   rules: {
     // jsx
@@ -64,6 +64,9 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
     'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
+
+    // unocss
+    '@unocss/order-attributify': 'off',
   },
   overrides: ts.overrides,
 }

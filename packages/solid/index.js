@@ -1,7 +1,7 @@
 const ts = require('@jhqn/eslint-config-ts')
 
 module.exports = {
-  extends: ['plugin:solid/typescript', '@jhqn/eslint-config-ts'],
+  extends: ['plugin:solid/typescript', '@jhqn/eslint-config-ts', 'plugin:@unocss/recommended'],
   plugins: ['react', 'solid'],
   rules: {
     'solid/destructuring-assignment': 0,
@@ -38,6 +38,9 @@ module.exports = {
     'react/jsx-no-duplicate-props': 2,
     'react/jsx-no-target-blank': 2,
     'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
+
+    // unocss
+    '@unocss/order-attributify': 'off',
   },
   overrides: ts.overrides,
 }

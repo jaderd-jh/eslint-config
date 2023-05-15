@@ -28,7 +28,6 @@ module.exports = {
     'plugin:yml/standard',
     'plugin:markdown/recommended',
     'plugin:prettier/recommended',
-    'plugin:@unocss/recommended',
   ],
   plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
   settings: {
@@ -216,9 +215,6 @@ module.exports = {
         vueIndentScriptAndStyle: true,
       },
     ],
-
-    // unocss
-    '@unocss/order-attributify': 'off',
   },
   ignorePatterns: [
     '*.min.*',
