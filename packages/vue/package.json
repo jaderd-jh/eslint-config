@@ -23,6 +23,6 @@
     "@jhqn/eslint-config-ts": "workspace:*",
     "@unocss/eslint-config": "^0.51.12",
     "eslint-plugin-prettier-vue": "^4.2.0",
-    "eslint-plugin-vue": "^9.11.1"
+    "eslint-plugin-vue": "^9.12.0"
   }
 }

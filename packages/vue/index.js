@@ -111,6 +111,7 @@ module.exports = {
         disallowVue3BuiltInComponents: true,
       },
     ],
+    'vue/no-mutating-props': ['error', { shallowOnly: true }],
 
     // prettier
     'prettier/prettier': 'off',
