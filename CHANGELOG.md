@@ -1,3 +1,12 @@
+## [0.4.9](https://github.com/jaderd-jh/eslint-config/compare/v0.4.8...v0.4.9) (2023-05-16)
+
+
+### Bug Fixes
+
+* **vue:** adjust `vue/define-macros-order` rule ([21a1279](https://github.com/jaderd-jh/eslint-config/commit/21a1279a78d8020a0adef2ee7d71765c21c186e2))
+
+
+
 ## [0.4.8](https://github.com/jaderd-jh/eslint-config/compare/v0.4.7...v0.4.8) (2023-05-15)
 
 
