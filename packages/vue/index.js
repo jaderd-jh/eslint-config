@@ -66,7 +66,7 @@ module.exports = {
     ],
     'vue/component-options-name-casing': ['error', 'PascalCase'],
     'vue/custom-event-name-casing': ['error', 'camelCase'],
-    'vue/define-macros-order': ['error', { order: ['defineProps', 'defineEmits'] }],
+    'vue/define-macros-order': ['error', { order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'] }],
     'vue/html-comment-content-spacing': ['error', 'always', { exceptions: ['-'] }],
     'vue/no-restricted-v-bind': ['error', '/^v-/'],
     'vue/no-useless-v-bind': 'error',
