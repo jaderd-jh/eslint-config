@@ -1,3 +1,12 @@
+## [0.4.10](https://github.com/jaderd-jh/eslint-config/compare/v0.4.9...v0.4.10) (2023-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-n to v16 ([#33](https://github.com/jaderd-jh/eslint-config/issues/33)) ([c4cb221](https://github.com/jaderd-jh/eslint-config/commit/c4cb2219f669389106c0586dc3af324b659f6c58))
+
+
+
 ## [0.4.9](https://github.com/jaderd-jh/eslint-config/compare/v0.4.8...v0.4.9) (2023-05-16)
 
 
