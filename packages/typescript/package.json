@@ -4,11 +4,6 @@
   "description": "jhqn's ESLint configuration for TypeScript",
   "author": "jade-gjz",
   "license": "MIT",
-  "keywords": [
-    "jhqn",
-    "eslint",
-    "eslint-config"
-  ],
   "homepage": "https://github.com/jaderd-jh/eslint-config/tree/main/packages/typescript#readme",
   "repository": {
     "type": "git",
@@ -18,6 +13,11 @@
   "bugs": {
     "url": "https://github.com/jaderd-jh/eslint-config/issues"
   },
+  "keywords": [
+    "jhqn",
+    "eslint",
+    "eslint-config"
+  ],
   "main": "index.js",
   "files": [
     "*.js"
