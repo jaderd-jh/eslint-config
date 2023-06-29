@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-solid",
-  "version": "0.4.10",
+  "version": "0.4.11-beta.0",
   "description": "jhqn's eslint config for solid",
   "author": "jade-gjz",
   "license": "MIT",
