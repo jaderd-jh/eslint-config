@@ -9,6 +9,15 @@
     "eslint",
     "eslint-config"
   ],
+  "homepage": "https://github.com/jaderd-jh/eslint-config/tree/main/packages/typescript#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaderd-jh/eslint-config",
+    "directory": "packages/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/jaderd-jh/eslint-config/issues"
+  },
   "main": "index.js",
   "files": [
     "*.js"
