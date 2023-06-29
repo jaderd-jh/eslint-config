@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-monorepo",
-  "version": "0.4.11-beta.0",
+  "version": "0.4.11-beta.1",
   "private": true,
   "description": "jhqn's ESLint configs",
   "author": "jade-gjz",
