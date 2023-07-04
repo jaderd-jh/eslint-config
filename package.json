@@ -6,7 +6,6 @@
   "author": "jade-gjz",
   "packageManager": "pnpm@8.6.5",
   "scripts": {
-    "install": "pnpm i --no-frozen-lockfile",
     "lint": "eslint .",
     "update": "pnpm up -i --latest -r",
     "release": "bumpp -r",
