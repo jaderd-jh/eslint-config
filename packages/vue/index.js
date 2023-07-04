@@ -1,6 +1,6 @@
 module.exports = {
   extends: require.resolve('./configs/uno'),
-  config: {
+  configs: {
     base: require('./configs/base'),
   },
 }
