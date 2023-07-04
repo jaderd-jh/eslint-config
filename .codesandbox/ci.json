@@ -1,0 +1,8 @@
+{
+  "packages": ["packages/*"],
+  "sandboxes": [
+    "vue-vite-ts-p6k75t",
+    "react-vite-ts-ny79d2"
+  ],
+  "node": "18"
+}
