@@ -1,4 +1,5 @@
 {
+  "installCommand": "install",
   "buildCommand": false,
   "packages": ["packages/*"],
   "sandboxes": [
