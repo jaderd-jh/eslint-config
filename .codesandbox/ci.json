@@ -1,4 +1,6 @@
 {
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": false,
   "packages": ["packages/*"],
   "sandboxes": [
     "vue-vite-ts-p6k75t",
