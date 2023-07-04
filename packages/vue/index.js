@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [require.resolve('./base'), 'plugin:@unocss/recommended'],
+  extends: ['plugin:@unocss/recommended', require.resolve('./base')],
   rules: {
     // unocss
     '@unocss/order-attributify': 'off',
