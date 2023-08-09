@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "@unocss/eslint-config": "^0.54.0",
+    "@unocss/eslint-config": "^0.54.2",
     "eslint-plugin-prettier-vue": "^4.2.0",
-    "eslint-plugin-vue": "^9.15.1"
+    "eslint-plugin-vue": "^9.16.1"
   }
 }
