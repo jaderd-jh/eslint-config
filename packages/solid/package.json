@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "@unocss/eslint-config": "^0.54.2",
+    "@unocss/eslint-config": "^0.55.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-solid": "^0.12.1"
   }
