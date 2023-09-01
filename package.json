@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "bumpp": "^9.1.1",
+    "bumpp": "^9.2.0",
     "conventional-changelog-cli": "^4.0.0",
-    "eslint": "^8.46.0",
-    "typescript": "^5.1.6"
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2"
   },
   "pnpm": {
     "peerDependencyRules": {
