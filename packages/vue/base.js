@@ -136,8 +136,8 @@ module.exports = {
         parser: '@typescript-eslint/parser',
       },
       rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': ['error', { varsIgnorePattern: '.*', args: 'none' }],
+        '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '.*', args: 'none' }],
         'no-undef': 'off',
         '@typescript-eslint/no-undef': 'off',
         'indent': 'off',
