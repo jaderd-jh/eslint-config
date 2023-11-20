@@ -4,7 +4,7 @@
   "private": true,
   "description": "jhqn's ESLint configs",
   "author": "jade-gjz",
-  "packageManager": "pnpm@8.10.3",
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "lint": "eslint .",
     "update": "pnpm up -i --latest -r",
