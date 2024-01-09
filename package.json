@@ -12,16 +12,31 @@
   },
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "bumpp": "^9.2.0",
+    "bumpp": "^9.2.1",
     "conventional-changelog-cli": "^4.1.0",
-    "eslint": "^8.51.0",
-    "typescript": "^5.2.2"
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
   },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "eslint"
       ]
+    },
+    "overrides": {
+      "array-includes": "npm:@nolyfill/array-includes@latest",
+      "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
+      "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
+      "array.prototype.tosorted": "npm:@nolyfill/array.prototype.tosorted@latest",
+      "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest",
+      "has": "npm:@nolyfill/has@latest",
+      "hasown": "npm:@nolyfill/hasown@latest",
+      "object.assign": "npm:@nolyfill/object.assign@latest",
+      "object.entries": "npm:@nolyfill/object.entries@latest",
+      "object.fromentries": "npm:@nolyfill/object.fromentries@latest",
+      "object.hasown": "npm:@nolyfill/object.hasown@latest",
+      "object.values": "npm:@nolyfill/object.values@latest",
+      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
     }
   }
 }
