@@ -45,7 +45,7 @@ module.exports = {
     'import/first': 'error',
     'import/extensions': 'off',
     'import/no-mutable-exports': 'error',
-    'import/no-unresolved': 'off',
+    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true, caseSensitiveStrict: true }],
     'import/no-absolute-path': 'off',
     'import/prefer-default-export': 'warn',
     'import/no-extraneous-dependencies': 'off',
