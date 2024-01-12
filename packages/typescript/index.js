@@ -6,7 +6,13 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
-      typescript: {},
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.app.json',
+      },
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.vue'],
     },
   },
   overrides: basic.overrides,

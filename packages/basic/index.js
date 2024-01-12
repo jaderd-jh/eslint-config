@@ -45,11 +45,17 @@ module.exports = {
     'import/first': 'error',
     'import/extensions': 'off',
     'import/no-mutable-exports': 'error',
-    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true, caseSensitiveStrict: true }],
+    'import/no-unresolved': [
+      'error',
+      { commonjs: true, ignore: ['^virtual:'], caseSensitive: true, caseSensitiveStrict: true },
+    ],
     'import/no-absolute-path': 'off',
     'import/prefer-default-export': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'import/no-duplicates': ['error', { considerQueryString: true }],
+    'import/no-named-as-default-member': 'off',
+    'import/no-named-as-default': 'off',
+    'import/namespace': 'off',
 
     // Common
     'semi': ['error', 'never'],
@@ -175,9 +181,6 @@ module.exports = {
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'eslint-comments/disable-enable-pair': 'off',
-    'import/no-named-as-default-member': 'off',
-    'import/no-named-as-default': 'off',
-    'import/namespace': 'off',
     'n/no-callback-literal': 'off',
 
     'sort-imports': [
