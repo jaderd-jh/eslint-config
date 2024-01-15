@@ -5,14 +5,14 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
+      node: { extensions: ['.d.ts', '.ts', '.tsx', '.mts', '.cts', '.js', '.jsx', '.mjs', '.cjs'] },
       typescript: {
         alwaysTryTypes: true,
         project: './tsconfig.app.json',
       },
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.d.ts', '.ts', '.tsx'],
     },
   },
   overrides: basic.overrides,

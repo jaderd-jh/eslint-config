@@ -31,11 +31,7 @@ module.exports = {
   ],
   plugins: ['eslint-comments', 'html', 'unicorn', 'n', 'promise'],
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-      },
-    },
+    'import/resolver': { node: { extensions: ['.js', '.jsx', '.d.ts', '.ts', '.tsx'] } },
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx', '.d.ts'],
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
@@ -47,7 +43,7 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': [
       'error',
-      { commonjs: true, ignore: ['^virtual:'], caseSensitive: true, caseSensitiveStrict: true },
+      { commonjs: true, ignore: ['^virtual:', '^uno.css$'], caseSensitive: true, caseSensitiveStrict: true },
     ],
     'import/no-absolute-path': 'off',
     'import/prefer-default-export': 'warn',
