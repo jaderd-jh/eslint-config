@@ -12,7 +12,7 @@ module.exports = {
       },
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx', '.vue'],
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
   overrides: basic.overrides,
