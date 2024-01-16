@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-react",
-  "version": "0.6.10",
+  "version": "0.6.11",
   "description": "jhqn's eslint config for react",
   "author": "jade-gjz",
   "license": "MIT",
