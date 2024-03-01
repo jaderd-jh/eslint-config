@@ -1,6 +1,6 @@
 {
   "name": "@jhqn/eslint-config-basic",
-  "version": "0.6.11",
+  "version": "0.6.12",
   "description": "jhqn's basic eslint config",
   "author": "jade-gjz",
   "license": "MIT",
