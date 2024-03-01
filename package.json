@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "bumpp": "^9.2.1",
+    "bumpp": "^9.3.0",
     "conventional-changelog-cli": "^4.1.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "typescript": "^5.3.3"
   },
   "pnpm": {
