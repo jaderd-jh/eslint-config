@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@jhqn/eslint-config-ts": "workspace:*",
-    "bumpp": "^9.3.0",
+    "bumpp": "^9.4.0",
     "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -25,9 +25,11 @@
     },
     "overrides": {
       "array-includes": "npm:@nolyfill/array-includes@latest",
+      "array.prototype.findlast": "npm:@nolyfill/array.prototype.findlast@latest",
       "array.prototype.findlastindex": "npm:@nolyfill/array.prototype.findlastindex@latest",
       "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
       "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
+      "array.prototype.toreversed": "npm:@nolyfill/array.prototype.toreversed@latest",
       "array.prototype.tosorted": "npm:@nolyfill/array.prototype.tosorted@latest",
       "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest",
       "eslint-plugin-import": "npm:eslint-plugin-i@latest",
