@@ -8,7 +8,7 @@ export async function jsdoc(options: OptionsStylistic = {}): Promise<FlatConfigI
 
   return [
     {
-      name: 'antfu:jsdoc',
+      name: 'jhqn:jsdoc',
       plugins: {
         jsdoc: await interopDefault(import('eslint-plugin-jsdoc')),
       },

@@ -21,7 +21,7 @@ export async function unocss(
 
   return [
     {
-      name: 'antfu:unocss',
+      name: 'jhqn:unocss',
       plugins: {
         unocss: pluginUnoCSS,
       },
