@@ -58,28 +58,6 @@ runWithConfig(
   },
 )
 
-runWithConfig(
-  'with-formatters',
-  {
-    typescript: true,
-    vue: true,
-    astro: true,
-    formatters: true,
-  },
-)
-
-runWithConfig(
-  'no-markdown-with-formatters',
-  {
-    jsx: false,
-    vue: false,
-    markdown: false,
-    formatters: {
-      markdown: true,
-    },
-  },
-)
-
 function runWithConfig(name: string, configs: OptionsConfig, ...items: FlatConfigItem[]) {
   it.concurrent(name, async ({ expect }) => {
     const from = resolve('fixtures/input')

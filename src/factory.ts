@@ -27,7 +27,6 @@ import {
   yaml,
 } from './configs'
 import { combine, interopDefault } from './utils'
-import { formatters } from './configs/formatters'
 
 const flatConfigProps: (keyof FlatConfigItem)[] = [
   'name',
@@ -206,13 +205,6 @@ export async function antfu(
         },
       ),
     )
-  }
-
-  if (options.formatters) {
-    configs.push(formatters(
-      options.formatters,
-      typeof stylisticOptions === 'boolean' ? {} : stylisticOptions,
-    ))
   }
 
   // User can optionally pass a flat config item to the first argument

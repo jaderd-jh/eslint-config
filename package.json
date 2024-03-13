@@ -45,7 +45,6 @@
     "astro-eslint-parser": "^0.16.3",
     "eslint": ">=8.40.0",
     "eslint-plugin-astro": "^0.31.4",
-    "eslint-plugin-format": ">=0.1.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
@@ -62,9 +61,6 @@
       "optional": true
     },
     "eslint-plugin-astro": {
-      "optional": true
-    },
-    "eslint-plugin-format": {
       "optional": true
     },
     "eslint-plugin-react": {
@@ -143,7 +139,6 @@
     "eslint": "npm:eslint-ts-patch@^8.57.0-0",
     "eslint-flat-config-viewer": "^0.1.11",
     "eslint-plugin-astro": "^0.31.4",
-    "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
