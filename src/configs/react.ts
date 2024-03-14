@@ -1,12 +1,6 @@
-import { isPackageExists } from 'local-pkg'
-import { ensurePackages, interopDefault } from '../utils'
-import type { FlatConfigItem, OptionsFiles, OptionsHasTypeScript, OptionsOverrides } from '../types'
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-
-// react refresh
-const ReactRefreshAllowConstantExportPackages = [
-  'vite',
-]
+import type { FlatConfigItem, OptionsFiles, OptionsHasTypeScript, OptionsOverrides } from '../types'
+import { ensurePackages, interopDefault } from '../utils'
 
 export async function react(
   options: OptionsHasTypeScript & OptionsOverrides & OptionsFiles = {},
@@ -20,22 +14,15 @@ export async function react(
   await ensurePackages([
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
-    'eslint-plugin-react-refresh',
   ])
 
   const [
     pluginReact,
     pluginReactHooks,
-    pluginReactRefresh,
   ] = await Promise.all([
     interopDefault(import('eslint-plugin-react')),
     interopDefault(import('eslint-plugin-react-hooks')),
-    interopDefault(import('eslint-plugin-react-refresh')),
   ] as const)
-
-  const isAllowConstantExport = ReactRefreshAllowConstantExportPackages.some(
-    i => isPackageExists(i),
-  )
 
   return [
     {
@@ -43,7 +30,6 @@ export async function react(
       plugins: {
         'react': pluginReact,
         'react-hooks': pluginReactHooks,
-        'react-refresh': pluginReactRefresh,
       },
       settings: {
         react: {
@@ -65,12 +51,6 @@ export async function react(
         // recommended rules react-hooks
         'react-hooks/exhaustive-deps': 'warn',
         'react-hooks/rules-of-hooks': 'error',
-
-        // react refresh
-        'react-refresh/only-export-components': [
-          'warn',
-          { allowConstantExport: isAllowConstantExport },
-        ],
 
         // recommended rules react
         'react/display-name': 'error',
