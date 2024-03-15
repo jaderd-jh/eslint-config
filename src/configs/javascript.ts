@@ -42,7 +42,6 @@ export async function javascript(
       },
       rules: {
         'accessor-pairs': ['error', { enforceForClassMembers: true, setWithoutGet: true }],
-
         'array-callback-return': 'error',
         'block-scoped-var': 'error',
         'constructor-super': 'error',

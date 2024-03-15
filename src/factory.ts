@@ -15,6 +15,7 @@ import {
   node,
   perfectionist,
   react,
+  regexp,
   sortPackageJson,
   sortTsconfig,
   stylistic,
@@ -96,6 +97,7 @@ export async function jhqn(
       overrides: getOverrides(options, 'javascript'),
     }),
     compat(),
+    regexp(),
     comments(),
     node(),
     jsdoc({

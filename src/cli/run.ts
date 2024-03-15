@@ -147,7 +147,7 @@ module.exports = jhqn({\n${antfuConfig}\n})
     else {
       let settingsContent = await fsp.readFile(settingsPath, 'utf8')
 
-      settingsContent = settingsContent.trim().replace(/\s*}$/, '')
+      settingsContent = settingsContent.trim().replace(/\s*\}$/, '')
       settingsContent += settingsContent.endsWith(',') || settingsContent.endsWith('{') ? '' : ','
       settingsContent += `${vscodeSettingsString}}\n`
 
