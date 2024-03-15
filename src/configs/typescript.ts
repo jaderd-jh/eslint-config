@@ -72,7 +72,7 @@ export async function typescript(
           ...parserOptions as any,
         },
       },
-      name: `antfu:typescript:${typeAware ? 'type-aware-parser' : 'parser'}`,
+      name: `jhqn:typescript:${typeAware ? 'type-aware-parser' : 'parser'}`,
     }
   }
 

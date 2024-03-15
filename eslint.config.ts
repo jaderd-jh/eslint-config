@@ -1,8 +1,7 @@
 // @ts-expect-error missing types
 import styleMigrate from '@stylistic/eslint-plugin-migrate'
 
-// eslint-disable-next-line antfu/no-import-dist
-import jhqn from './dist/index.js'
+import jhqn from './src/index'
 
 export default jhqn(
   {
@@ -13,7 +12,6 @@ export default jhqn(
       'fixtures',
       '_fixtures',
     ],
-    formatters: true,
   },
   {
     files: ['src/**/*.ts'],

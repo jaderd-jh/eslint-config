@@ -5,6 +5,7 @@ import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '.
 import {
   astro,
   comments,
+  compat,
   ignores,
   imports,
   javascript,
@@ -50,7 +51,7 @@ const VuePackages = [
 /**
  * Construct an array of ESLint flat config items.
  */
-export async function antfu(
+export async function jhqn(
   options: OptionsConfig & FlatConfigItem = {},
   ...userConfigs: Awaitable<UserConfigItem | UserConfigItem[]>[]
 ): Promise<UserConfigItem[]> {
@@ -94,6 +95,7 @@ export async function antfu(
       isInEditor,
       overrides: getOverrides(options, 'javascript'),
     }),
+    compat(),
     comments(),
     node(),
     jsdoc({

@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "module": "es2020",
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
