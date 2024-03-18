@@ -9,3 +9,16 @@ export function isGitClean() {
     return false
   }
 }
+
+export function getEslintConfigContent(
+  mainConfig: string,
+  additionalConfigs?: string[],
+) {
+  return `
+import jhqn from '@jhqn/eslint-config'
+
+export default jhqn({
+${mainConfig}
+}${additionalConfigs?.map(config => `,{\n${config}\n}`)})
+`.trimStart()
+}
