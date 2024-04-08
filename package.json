@@ -14,7 +14,7 @@
     "@jhqn/eslint-config-ts": "workspace:*",
     "bumpp": "^9.4.0",
     "conventional-changelog-cli": "^4.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "typescript": "^5.4.2"
   },
   "pnpm": {
