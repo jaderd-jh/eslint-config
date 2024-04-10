@@ -39,8 +39,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
       eslint-flat-config-utils:
-        specifier: 0.0.4
-        version: 0.0.4
+        specifier: ^0.1.2
+        version: 0.1.2
       eslint-import-resolver-typescript:
         specifier: ^3.6.1
         version: 3.6.1(@typescript-eslint/parser@7.6.0)(eslint-plugin-import@2.29.1)(eslint@9.0.0)
@@ -2783,8 +2783,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: false
 
-  /eslint-flat-config-utils@0.0.4:
-    resolution: {integrity: sha512-CIayQTaVhp6KVAgVkDyOpgoTAvCsJWugPKhf327nLJqG0MF3gNBFq0Zy1zD7ncfbk80e7z7BV3nKwsbLV5Oq8A==}
+  /eslint-flat-config-utils@0.1.2:
+    resolution: {integrity: sha512-NfeUJrbARSHGux2no/zz+YOjfMuPXpedcxRTqov3mlx9PJV2CYAJEj2EjbNSEyHMXQwNCfTtQVZXMSiktQTcpA==}
     dependencies:
       '@types/eslint': 8.56.7
     dev: false
