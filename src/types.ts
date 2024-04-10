@@ -3,11 +3,11 @@ import type { ParserOptions } from '@typescript-eslint/parser'
 import type { Options as VueBlocksOptions } from 'eslint-processor-vue-blocks'
 import type { Linter } from 'eslint'
 import type { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
-import type { RulesOptions } from './typegen'
+import type { RuleOptions } from './typegen'
 
 export type Awaitable<T> = T | Promise<T>
 
-export type Rules = RulesOptions
+export type Rules = RuleOptions
 
 export type FlatConfigItem = Omit<Linter.FlatConfig, 'plugins' | 'rules'> & {
   /**
@@ -28,7 +28,7 @@ export type FlatConfigItem = Omit<Linter.FlatConfig, 'plugins' | 'rules'> & {
    */
   rules?: {
     [key: string]: Linter.RuleEntry
-  } & RulesOptions
+  } & Rules
 }
 
 export interface OptionsFiles {
