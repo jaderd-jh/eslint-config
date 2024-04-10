@@ -1,7 +1,11 @@
-// @ts-expect-error missing types
 import styleMigrate from '@stylistic/eslint-plugin-migrate'
+import JITI from 'jiti'
 
-import jhqn from './src/index'
+const jiti = JITI(import.meta.url)
+/**
+ * @type {import('./src').default}
+ */
+const jhqn = jiti('./src').default
 
 export default jhqn(
   {
