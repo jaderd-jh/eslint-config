@@ -77,6 +77,10 @@ dist
 # IDE
 .idea
 
+*.lerna_backup
 _fixtures
 
-*.lerna_backup
+.temp
+.history
+
+src/typegen.d.ts

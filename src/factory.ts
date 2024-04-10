@@ -2,7 +2,7 @@ import process from 'node:process'
 import fs from 'node:fs'
 import { isPackageExists } from 'local-pkg'
 import { FlatConfigPipeline } from 'eslint-flat-config-utils'
-import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from './types'
+import type { Awaitable, FlatConfigItem, OptionsConfig } from './types'
 import {
   astro,
   comments,
@@ -64,15 +64,15 @@ export const defaultPluginRenaming = {
  *
  * @param {OptionsConfig & FlatConfigItem} options
  *  The options for generating the ESLint configurations.
- * @param {Awaitable<UserConfigItem | UserConfigItem[]>[]} userConfigs
+ * @param {Awaitable<FlatConfigItem | FlatConfigItem[]>[]} userConfigs
  *  The user configurations to be merged with the generated configurations.
- * @returns {Promise<UserConfigItem[]>}
+ * @returns {Promise<FlatConfigItem[]>}
  *  The merged ESLint configurations.
  */
 export function jhqn(
   options: OptionsConfig & FlatConfigItem = {},
-  ...userConfigs: Awaitable<UserConfigItem | UserConfigItem[]>[]
-): FlatConfigPipeline<UserConfigItem[]> {
+  ...userConfigs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]
+): FlatConfigPipeline<FlatConfigItem[]> {
   const {
     astro: enableAstro = false,
     autoRenamePlugins = true,
@@ -237,7 +237,7 @@ export function jhqn(
   if (Object.keys(fusedConfig).length)
     configs.push([fusedConfig])
 
-  let pipeline = new FlatConfigPipeline<UserConfigItem>()
+  let pipeline = new FlatConfigPipeline<FlatConfigItem>()
 
   pipeline = pipeline
       .append(

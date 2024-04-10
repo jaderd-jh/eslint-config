@@ -28,11 +28,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --format esm,cjs --clean --dts",
+    "build": "nr typegen && tsup --format esm,cjs --clean --dts",
     "stub": "tsup --format esm",
     "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
+    "typegen": "esno scripts/typegen.ts",
     "prepack": "pnpm build",
     "updeps": "pnpm up -i --latest -r",
     "release": "bumpp",
@@ -82,12 +83,8 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-define-config": "^1.23.0-2",
     "@antfu/install-pkg": "^0.3.2",
     "@clack/prompts": "^0.7.0",
-    "@eslint-types/jsdoc": "^48.2.2",
-    "@eslint-types/typescript-eslint": "^7.5.0",
-    "@eslint-types/unicorn": "^52.0.0",
     "@stylistic/eslint-plugin": "^1.7.0",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
@@ -127,6 +124,7 @@
   "devDependencies": {
     "@antfu/eslint-plugin-prettier": "^5.0.1-1",
     "@jhqn/eslint-config": "workspace:*",
+    "@antfu/ni": "^0.21.12",
     "@stylistic/eslint-plugin-migrate": "^1.7.0",
     "@types/eslint": "^8.56.7",
     "@types/fs-extra": "^11.0.4",
@@ -144,6 +142,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-svelte": "^2.36.0",
+    "eslint-typegen": "^0.0.2",
+    "esno": "^4.7.0",
     "execa": "^8.0.1",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
