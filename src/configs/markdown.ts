@@ -1,5 +1,5 @@
 import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors'
-import type { TypedFlatConfigItem, OptionsComponentExts, OptionsFiles, OptionsOverrides } from '../types'
+import type { OptionsComponentExts, OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE, GLOB_MARKDOWN_IN_MARKDOWN } from '../globs'
 import { interopDefault, parserPlain } from '../utils'
 

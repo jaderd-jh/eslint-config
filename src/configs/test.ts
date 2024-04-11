@@ -1,5 +1,5 @@
 import { interopDefault } from '../utils'
-import type { TypedFlatConfigItem, OptionsFiles, OptionsIsInEditor, OptionsOverrides } from '../types'
+import type { OptionsFiles, OptionsIsInEditor, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { GLOB_TESTS } from '../globs'
 
 export async function test(

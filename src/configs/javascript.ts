@@ -1,5 +1,5 @@
 import globals from 'globals'
-import type { TypedFlatConfigItem, OptionsIsInEditor, OptionsOverrides } from '../types'
+import type { OptionsIsInEditor, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { pluginAntfu, pluginUnusedImports } from '../plugins'
 import { GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 

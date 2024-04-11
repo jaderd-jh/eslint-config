@@ -128,9 +128,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-plugin-prettier": "^5.0.1-1",
-    "@jhqn/eslint-config": "workspace:*",
     "@antfu/ni": "^0.21.12",
     "@eslint/config-inspector": "^0.4.5",
+    "@jhqn/eslint-config": "workspace:*",
     "@stylistic/eslint-plugin-migrate": "^1.7.0",
     "@types/eslint": "^8.56.7",
     "@types/fs-extra": "^11.0.4",

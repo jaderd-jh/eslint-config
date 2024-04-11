@@ -4,7 +4,7 @@ import { afterAll, beforeAll, it } from 'vitest'
 import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
-import type { TypedFlatConfigItem, OptionsConfig } from '../src'
+import type { OptionsConfig, TypedFlatConfigItem } from '../src'
 
 beforeAll(async () => {
   await rm('_fixtures', { recursive: true, force: true })

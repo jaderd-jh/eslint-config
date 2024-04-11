@@ -1,5 +1,5 @@
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-import type { TypedFlatConfigItem, OptionsFiles, OptionsHasTypeScript, OptionsOverrides } from '../types'
+import type { OptionsFiles, OptionsHasTypeScript, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { ensurePackages, interopDefault } from '../utils'
 
 export async function react(

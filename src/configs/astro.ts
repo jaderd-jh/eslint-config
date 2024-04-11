@@ -1,4 +1,4 @@
-import type { TypedFlatConfigItem, OptionsFiles, OptionsOverrides, OptionsStylistic } from '../types'
+import type { OptionsFiles, OptionsOverrides, OptionsStylistic, TypedFlatConfigItem } from '../types'
 import { GLOB_ASTRO } from '../globs'
 import { interopDefault } from '../utils'
 

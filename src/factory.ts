@@ -3,11 +3,11 @@ import fs from 'node:fs'
 import { isPackageExists } from 'local-pkg'
 import { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Linter } from 'eslint'
-import type { Awaitable, TypedFlatConfigItem, OptionsConfig } from './types'
+import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types'
 import {
   astro,
   comments,
-  compat,
+  // compat,
   ignores,
   imports,
   javascript,
@@ -18,7 +18,7 @@ import {
   perfectionist,
   react,
   solid,
-  regexp,
+  // regexp,
   sortPackageJson,
   sortTsconfig,
   stylistic,
@@ -117,8 +117,8 @@ export function jhqn(
       isInEditor,
       overrides: getOverrides(options, 'javascript'),
     }),
-    compat(),
-    regexp(),
+    // compat(),
+    // regexp(),
     comments(),
     node(),
     jsdoc({

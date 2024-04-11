@@ -1,5 +1,5 @@
 import { ensurePackages, interopDefault } from '../utils'
-import type { TypedFlatConfigItem, OptionsUnoCSS } from '../types'
+import type { OptionsUnoCSS, TypedFlatConfigItem } from '../types'
 
 export async function unocss(
   options: OptionsUnoCSS = {},
