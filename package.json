@@ -31,6 +31,7 @@
     "build": "nr typegen && tsup --format esm,cjs --clean --dts",
     "stub": "tsup --format esm",
     "dev": "tsup --format esm,cjs --watch & npx @eslint/config-inspector",
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
     "typegen": "esno scripts/typegen.ts",
