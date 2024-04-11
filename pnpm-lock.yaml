@@ -181,8 +181,8 @@ importers:
         specifier: ^2.36.0
         version: 2.36.0(eslint@9.0.0)(svelte@4.2.12)
       eslint-typegen:
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.2.2
+        version: 0.2.2(eslint@9.0.0)
       esno:
         specifier: ^4.7.0
         version: 4.7.0
@@ -3442,10 +3442,16 @@ packages:
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
-  /eslint-typegen@0.1.6:
-    resolution: {integrity: sha512-M6a9l3ifdZvZIJahUQmf1c1gVxoNu9e8E1Uwzu3bg2jKH1dfSkO8KSViNio54vEQCvyVPfJky5U246hZf4j1RA==}
+  /eslint-typegen@0.2.2(eslint@9.0.0):
+    resolution: {integrity: sha512-hgKW5octZPdbnOvzWYjzdk3fD8P8n2c7RvmYlVF3zLFjkf2wyvAf9QRt/r8a7jYzqh6lZrVgr81XOe5jwz3z9g==}
+    peerDependencies:
+      eslint: ^8.45.0 || ^9.0.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
     dependencies:
       '@types/eslint': 8.56.7
+      eslint: 9.0.0
       json-schema-to-typescript-lite: 14.0.0
       ohash: 1.1.3
     dev: true
