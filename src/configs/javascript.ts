@@ -215,7 +215,7 @@ export async function javascript(
     },
     {
       files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
-      name: 'jhqn:scripts-overrides',
+      name: 'jhqn:disables:cli',
       rules: {
         'no-console': 'off',
       },
