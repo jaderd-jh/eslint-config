@@ -1,7 +1,7 @@
-import type { FlatConfigItem } from '../types'
+import type { TypedFlatConfigItem } from '../types'
 import { pluginRegexp } from '../plugins'
 
-export async function regexp(): Promise<FlatConfigItem[]> {
+export async function regexp(): Promise<TypedFlatConfigItem[]> {
   return [
     {
       name: 'jhqn:regexp',

@@ -1,10 +1,10 @@
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-import type { FlatConfigItem, OptionsFiles, OptionsHasTypeScript, OptionsOverrides } from '../types'
+import type { TypedFlatConfigItem, OptionsFiles, OptionsHasTypeScript, OptionsOverrides } from '../types'
 import { ensurePackages, interopDefault } from '../utils'
 
 export async function react(
   options: OptionsHasTypeScript & OptionsOverrides & OptionsFiles = {},
-): Promise<FlatConfigItem[]> {
+): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_JSX, GLOB_TSX],
     overrides = {},

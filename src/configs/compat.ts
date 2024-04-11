@@ -1,4 +1,4 @@
-import type { FlatConfigItem } from '../types'
+import type { TypedFlatConfigItem } from '../types'
 import { pluginEcmascriptCompat } from '../plugins'
 
 /**
@@ -6,7 +6,7 @@ import { pluginEcmascriptCompat } from '../plugins'
  *
  * @see https://github.com/robatwilliams/es-compat/tree/master/packages/eslint-plugin-ecmascript-compat
  */
-export async function compat(): Promise<FlatConfigItem[]> {
+export async function compat(): Promise<TypedFlatConfigItem[]> {
   return [
     {
       name: 'jhqn:compat',

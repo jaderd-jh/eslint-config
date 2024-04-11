@@ -4,7 +4,7 @@ import { afterAll, beforeAll, it } from 'vitest'
 import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
-import type { FlatConfigItem, OptionsConfig } from '../src'
+import type { TypedFlatConfigItem, OptionsConfig } from '../src'
 
 beforeAll(async () => {
   await rm('_fixtures', { recursive: true, force: true })
@@ -58,7 +58,7 @@ runWithConfig(
   },
 )
 
-function runWithConfig(name: string, configs: OptionsConfig, ...items: FlatConfigItem[]) {
+function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlatConfigItem[]) {
   it.concurrent(name, async ({ expect }) => {
     const from = resolve('fixtures/input')
     const output = resolve('fixtures/output', name)

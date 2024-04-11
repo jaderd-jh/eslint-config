@@ -1,8 +1,8 @@
-import type { FlatConfigItem } from '../types'
+import type { TypedFlatConfigItem } from '../types'
 import { pluginAntfu, pluginImport } from '../plugins'
 import { GLOB_SRC_EXT } from '../globs'
 
-export async function imports(): Promise<FlatConfigItem[]> {
+export async function imports(): Promise<TypedFlatConfigItem[]> {
   return [
     {
       name: 'jhqn:imports',
