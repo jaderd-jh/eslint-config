@@ -177,6 +177,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
         version: 4.6.0(eslint@9.0.0)
+      eslint-plugin-solid:
+        specifier: ^0.13.2
+        version: 0.13.2(eslint@9.0.0)(typescript@5.4.4)
       eslint-plugin-svelte:
         specifier: ^2.36.0
         version: 2.36.0(eslint@9.0.0)(svelte@4.2.12)
@@ -3250,6 +3253,27 @@ packages:
       scslre: 0.3.0
     dev: false
 
+  /eslint-plugin-solid@0.13.2(eslint@9.0.0)(typescript@5.4.4):
+    resolution: {integrity: sha512-Ndeuc6MEO11YVqzIzxtKKEG0t4HPJ4ob/WQyduwpTW//NtyZqWx/gPii5GF656DLqBbsfsmMaX0zkFQ8ElyOdQ==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+    dependencies:
+      '@typescript-eslint/utils': 6.21.0(eslint@9.0.0)(typescript@5.4.4)
+      eslint: 9.0.0
+      estraverse: 5.3.0
+      is-html: 2.0.0
+      kebab-case: 1.0.2
+      known-css-properties: 0.24.0
+      style-to-object: 0.3.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
   /eslint-plugin-svelte@2.36.0(eslint@9.0.0)(svelte@4.2.12):
     resolution: {integrity: sha512-D30hSj13Y8YEn7yGXos7EYp0lpEb3Z2V/M+6a3MZ13KGVhaefdW2A9j8IBIcW4YR+j6fo901USzLeXQz/XbWeQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -3945,6 +3969,11 @@ packages:
       lru-cache: 10.0.1
     dev: true
 
+  /html-tags@3.3.1:
+    resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
+    engines: {node: '>=8'}
+    dev: true
+
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
@@ -3973,6 +4002,10 @@ packages:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
     dev: false
+
+  /inline-style-parser@0.1.1:
+    resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
+    dev: true
 
   /internal-slot@1.0.7:
     resolution: {integrity: sha512-NGnrKwXzSms2qUUih/ILZ5JBqNTSa1+ZmP6flaIp6KmSElgE9qdndzS3cqjrDovwFdmwsGsLdeFgB6suw+1e9g==}
@@ -4101,6 +4134,13 @@ packages:
   /is-hexadecimal@1.0.4:
     resolution: {integrity: sha512-gyPJuv83bHMpocVYoqof5VDiZveEoGoFL8m3BXNb2VW8Xs+rz9kqO8LOQ5DH6EsuvilT1ApazU0pyl+ytbPtlw==}
     dev: false
+
+  /is-html@2.0.0:
+    resolution: {integrity: sha512-S+OpgB5i7wzIue/YSE5hg0e5ZYfG3hhpNh9KGl6ayJ38p7ED6wxQLd1TV91xHpcTvw90KMJ9EwN3F/iNflHBVg==}
+    engines: {node: '>=8'}
+    dependencies:
+      html-tags: 3.3.1
+    dev: true
 
   /is-inside-container@1.0.0:
     resolution: {integrity: sha512-KIYLCCJghfHZxqjYBE7rEy0OBuTd5xCHS7tHVgvCLkx7StIoaxwNW3hCALgEUjFfeRk+MG/Qxmp/vtETEF3tRA==}
@@ -4355,6 +4395,10 @@ packages:
       object.values: 1.2.0
     dev: true
 
+  /kebab-case@1.0.2:
+    resolution: {integrity: sha512-7n6wXq4gNgBELfDCpzKc+mRrZFs7D+wgfF5WRFLNAr4DA/qtr9Js8uOAVAfHhuLMfAcQ0pRKqbpjx+TcJVdE1Q==}
+    dev: true
+
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
     dependencies:
@@ -4363,6 +4407,10 @@ packages:
   /kleur@3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
+    dev: true
+
+  /known-css-properties@0.24.0:
+    resolution: {integrity: sha512-RTSoaUAfLvpR357vWzAz/50Q/BmHfmE6ETSWfutT0AJiw10e6CmcdYRQJlLRd95B53D0Y2aD1jSxD3V3ySF+PA==}
     dev: true
 
   /known-css-properties@0.30.0:
@@ -5616,6 +5664,12 @@ packages:
     resolution: {integrity: sha512-Op+UycaUt/8FbN/Z2TWPBLge3jWrP3xj10f3fnYxf052bKuS3EKs1ZQcVGjnEMdsNVAM+plXRdmjrZ/KgG3Skw==}
     dependencies:
       js-tokens: 9.0.0
+
+  /style-to-object@0.3.0:
+    resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
+    dependencies:
+      inline-style-parser: 0.1.1
+    dev: true
 
   /sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}

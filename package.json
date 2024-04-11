@@ -49,6 +49,7 @@
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-solid": "^0.13.2",
     "eslint-plugin-svelte": "^2.36.0",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-slidev": "^1.0.5",
@@ -68,6 +69,9 @@
       "optional": true
     },
     "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-solid": {
       "optional": true
     },
     "eslint-plugin-svelte": {
@@ -142,6 +146,7 @@
     "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-solid": "^0.13.2",
     "eslint-plugin-svelte": "^2.36.0",
     "eslint-typegen": "^0.2.2",
     "esno": "^4.7.0",
