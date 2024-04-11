@@ -9,7 +9,7 @@ import { pluginEcmascriptCompat } from '../plugins'
 export async function compat(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn:compat',
+      name: 'jhqn/compat/rules',
       plugins: {
         'es-syntax': pluginEcmascriptCompat,
       },

@@ -36,7 +36,7 @@ export async function stylistic(
 
   return [
     {
-      name: 'jhqn:stylistic',
+      name: 'jhqn/stylistic/rules',
       plugins: {
         antfu: pluginAntfu,
         style: pluginStylistic,

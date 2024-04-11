@@ -25,7 +25,7 @@ export async function toml(
 
   return [
     {
-      name: 'jhqn:toml:setup',
+      name: 'jhqn/toml/setup',
       plugins: {
         toml: pluginToml,
       },
@@ -35,7 +35,7 @@ export async function toml(
       languageOptions: {
         parser: parserToml,
       },
-      name: 'jhqn:toml:rules',
+      name: 'jhqn/toml/rules',
       rules: {
         'style/spaced-comment': 'off',
 

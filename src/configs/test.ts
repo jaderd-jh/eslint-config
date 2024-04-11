@@ -22,7 +22,7 @@ export async function test(
 
   return [
     {
-      name: 'jhqn:test:setup',
+      name: 'jhqn/test/setup',
       plugins: {
         test: {
           ...pluginVitest,
@@ -36,7 +36,7 @@ export async function test(
     },
     {
       files,
-      name: 'jhqn:test:rules',
+      name: 'jhqn/test/rules',
       rules: {
         'node/prefer-global/process': 'off',
 

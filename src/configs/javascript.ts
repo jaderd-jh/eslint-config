@@ -35,7 +35,7 @@ export async function javascript(
       linterOptions: {
         reportUnusedDisableDirectives: true,
       },
-      name: 'jhqn:javascript',
+      name: 'jhqn/javascript/rules',
       plugins: {
         'antfu': pluginAntfu,
         'unused-imports': pluginUnusedImports,
@@ -215,7 +215,7 @@ export async function javascript(
     },
     {
       files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
-      name: 'jhqn:disables:cli',
+      name: 'jhqn/javascript/disables/cli',
       rules: {
         'no-console': 'off',
       },

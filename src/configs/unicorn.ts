@@ -4,7 +4,7 @@ import { pluginUnicorn } from '../plugins'
 export async function unicorn(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn:unicorn',
+      name: 'jhqn/unicorn/rules',
       plugins: {
         unicorn: pluginUnicorn,
       },

@@ -4,7 +4,7 @@ import { pluginNode } from '../plugins'
 export async function node(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn:node',
+      name: 'jhqn/node/rules',
       plugins: {
         node: pluginNode,
       },

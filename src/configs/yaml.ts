@@ -26,7 +26,7 @@ export async function yaml(
 
   return [
     {
-      name: 'jhqn:yaml:setup',
+      name: 'jhqn/yaml/setup',
       plugins: {
         yaml: pluginYaml,
       },
@@ -36,7 +36,7 @@ export async function yaml(
       languageOptions: {
         parser: parserYaml,
       },
-      name: 'jhqn:yaml:rules',
+      name: 'jhqn/yaml/rules',
       rules: {
         'style/spaced-comment': 'off',
 

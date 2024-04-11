@@ -25,7 +25,7 @@ export async function jsonc(
 
   return [
     {
-      name: 'jhqn:jsonc:setup',
+      name: 'jhqn/jsonc/setup',
       plugins: {
         jsonc: pluginJsonc as any,
       },
@@ -35,7 +35,7 @@ export async function jsonc(
       languageOptions: {
         parser: parserJsonc,
       },
-      name: 'jhqn:jsonc:rules',
+      name: 'jhqn/jsonc/rules',
       rules: {
         'jsonc/no-bigint-literals': 'error',
         'jsonc/no-binary-expression': 'error',

@@ -9,15 +9,19 @@ const jiti = JITI(import.meta.url)
 const jhqn = jiti('./src').default
 
 export default jhqn(
-  {
-    vue: true,
-    // react: true,
-    typescript: true,
-    ignores: [
-      'fixtures',
-      '_fixtures',
-    ],
-  },
+    {
+        vue: true,
+        react: true,
+        svelte: true,
+        astro: true,
+        typescript: true,
+    },
+    {
+        ignores: [
+            'fixtures',
+            '_fixtures',
+        ],
+    },
   {
     files: ['src/**/*.ts'],
     rules: {

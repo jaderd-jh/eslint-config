@@ -23,7 +23,7 @@ export async function astro(
 
   return [
     {
-      name: 'jhqn:astro:setup',
+      name: 'jhqn/astro/setup',
       plugins: {
         astro: pluginAstro,
       },
@@ -37,7 +37,7 @@ export async function astro(
           parser: parserTs as any,
         },
       },
-      name: 'jhqn:astro:rules',
+      name: 'jhqn/astro/rules',
       rules: {
         'astro/no-set-html-directive': 'off',
         'astro/semi': 'off',

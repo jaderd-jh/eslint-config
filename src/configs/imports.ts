@@ -5,7 +5,7 @@ import { GLOB_SRC_EXT } from '../globs'
 export async function imports(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn:imports',
+      name: 'jhqn/imports/rules',
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,
@@ -50,7 +50,7 @@ export async function imports(): Promise<TypedFlatConfigItem[]> {
     },
     {
       files: ['**/bin/**/*', `**/bin.${GLOB_SRC_EXT}`],
-      name: 'jhqn:disables:imports-bin',
+      name: 'jhqn/imports/disables/bin',
       rules: {
         'antfu/no-import-dist': 'off',
         'antfu/no-import-node-modules-by-path': 'off',

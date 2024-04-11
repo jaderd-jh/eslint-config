@@ -4,7 +4,7 @@ import { pluginRegexp } from '../plugins'
 export async function regexp(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn:regexp',
+      name: 'jhqn/regexp/rules',
       plugins: {
         regexp: pluginRegexp,
       },

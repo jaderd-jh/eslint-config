@@ -72,14 +72,14 @@ export async function typescript(
           ...parserOptions as any,
         },
       },
-      name: `jhqn:typescript:${typeAware ? 'type-aware-parser' : 'parser'}`,
+      name: `jhqn/typescript/${typeAware ? 'type-aware-parser' : 'parser'}`,
     }
   }
 
   return [
     {
       // Install the plugins without globs, so they can be configured separately.
-      name: 'jhqn:typescript:setup',
+      name: 'jhqn/typescript/setup',
       plugins: {
         antfu: pluginAntfu,
         ts: pluginTs as any,
@@ -94,7 +94,7 @@ export async function typescript(
       : [makeParser(false, files)],
     {
       files,
-      name: 'jhqn:typescript:rules',
+      name: 'jhqn/typescript/rules',
       rules: {
         ...renameRules(
           pluginTs.configs['eslint-recommended'].overrides![0].rules!,
@@ -133,17 +133,19 @@ export async function typescript(
         ...overrides,
       },
     },
-    {
-      files: filesTypeAware,
-      name: 'jhqn:typescript:rules-type-aware',
-      rules: {
-        ...tsconfigPath ? typeAwareRules : {},
-        ...overrides,
-      },
-    },
+    ...isTypeAware
+        ? [{
+          files: filesTypeAware,
+          name: 'jhqn/typescript/rules-type-aware',
+          rules: {
+            ...tsconfigPath ? typeAwareRules : {},
+            ...overrides,
+          },
+        }]
+        : [],
     {
       files: ['**/*.d.ts'],
-      name: 'jhqn:typescript:dts-overrides',
+      name: 'jhqn/typescript/disables/dts',
       rules: {
         'eslint-comments/no-unlimited-disable': 'off',
         'import/no-duplicates': 'off',
@@ -153,14 +155,14 @@ export async function typescript(
     },
     {
       files: ['**/*.{test,spec}.ts?(x)'],
-      name: 'jhqn:typescript:tests-overrides',
+      name: 'jhqn/typescript/disables/test',
       rules: {
         'no-unused-expressions': 'off',
       },
     },
     {
       files: ['**/*.js', '**/*.cjs'],
-      name: 'jhqn:typescript:javascript-overrides',
+      name: 'jhqn/typescript/disables/cjs',
       rules: {
         'ts/no-require-imports': 'off',
         'ts/no-var-requires': 'off',
