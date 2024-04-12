@@ -1,6 +1,6 @@
 {
   "buildCommand": false,
-  "packages": ["*"],
+  "packages": ["@jhqn/eslint-config"],
   "sandboxes": [
     "vue-vite-ts-p6k75t",
     "react-vite-ts-ny79d2"
