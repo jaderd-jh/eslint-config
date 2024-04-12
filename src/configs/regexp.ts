@@ -1,3 +1,4 @@
+import type { Linter } from 'eslint'
 import type { TypedFlatConfigItem } from '../types'
 import { pluginRegexp } from '../plugins'
 
@@ -8,7 +9,9 @@ export async function regexp(): Promise<TypedFlatConfigItem[]> {
       plugins: {
         regexp: pluginRegexp,
       },
-      rules: pluginRegexp.configs['flat/recommended'].rules,
+      rules: {
+        ...pluginRegexp.configs['flat/recommended'].rules as Linter.RulesRecord,
+      },
     },
   ]
 }

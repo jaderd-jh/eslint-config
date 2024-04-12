@@ -17,8 +17,8 @@ import {
   node,
   perfectionist,
   react,
+  regexp,
   solid,
-  // regexp,
   sortPackageJson,
   sortTsconfig,
   stylistic,
@@ -55,6 +55,7 @@ const VuePackages = [
 export const defaultPluginRenaming = {
   '@stylistic': 'style',
   '@typescript-eslint': 'ts',
+  'es-syntax': 'ecmascript-compat',
   'import-x': 'import',
   'n': 'node',
   'vitest': 'test',
@@ -118,7 +119,7 @@ export function jhqn(
       overrides: getOverrides(options, 'javascript'),
     }),
     // compat(),
-    // regexp(),
+    regexp(),
     comments(),
     node(),
     jsdoc({
