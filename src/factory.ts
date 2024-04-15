@@ -21,7 +21,6 @@ import {
   solid,
   sortPackageJson,
   sortTsconfig,
-  stylistic,
   svelte,
   test,
   toml,
@@ -90,15 +89,6 @@ export function jhqn(
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
   } = options
 
-  const stylisticOptions = options.stylistic === false
-    ? false
-    : typeof options.stylistic === 'object'
-      ? options.stylistic
-      : {}
-
-  if (stylisticOptions && !('jsx' in stylisticOptions))
-    stylisticOptions.jsx = options.jsx ?? true
-
   const configs: Awaitable<TypedFlatConfigItem[]>[] = []
 
   if (enableGitignore) {
@@ -122,9 +112,7 @@ export function jhqn(
     regexp(),
     comments(),
     node(),
-    jsdoc({
-      stylistic: stylisticOptions,
-    }),
+    jsdoc(),
     imports(),
     unicorn(),
 
@@ -143,13 +131,6 @@ export function jhqn(
     }))
   }
 
-  if (stylisticOptions) {
-    configs.push(stylistic({
-      ...stylisticOptions,
-      overrides: getOverrides(options, 'stylistic'),
-    }))
-  }
-
   if (options.test ?? true) {
     configs.push(test({
       isInEditor,
@@ -161,7 +142,6 @@ export function jhqn(
     configs.push(vue({
       ...resolveSubOptions(options, 'vue'),
       overrides: getOverrides(options, 'vue'),
-      stylistic: stylisticOptions,
       typescript: !!enableTypeScript,
     }))
   }
@@ -184,7 +164,6 @@ export function jhqn(
   if (enableSvelte) {
     configs.push(svelte({
       overrides: getOverrides(options, 'svelte'),
-      stylistic: stylisticOptions,
       typescript: !!enableTypeScript,
     }))
   }
@@ -199,7 +178,6 @@ export function jhqn(
   if (enableAstro) {
     configs.push(astro({
       overrides: getOverrides(options, 'astro'),
-      stylistic: stylisticOptions,
     }))
   }
 
@@ -207,7 +185,6 @@ export function jhqn(
     configs.push(
       jsonc({
         overrides: getOverrides(options, 'jsonc'),
-        stylistic: stylisticOptions,
       }),
       sortPackageJson(),
       sortTsconfig(),
@@ -217,14 +194,12 @@ export function jhqn(
   if (options.yaml ?? true) {
     configs.push(yaml({
       overrides: getOverrides(options, 'yaml'),
-      stylistic: stylisticOptions,
     }))
   }
 
   if (options.toml ?? true) {
     configs.push(toml({
       overrides: getOverrides(options, 'toml'),
-      stylistic: stylisticOptions,
     }))
   }
 

@@ -1,14 +1,13 @@
-import type { OptionsFiles, OptionsOverrides, OptionsStylistic, TypedFlatConfigItem } from '../types'
+import type { OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { GLOB_ASTRO } from '../globs'
 import { interopDefault } from '../utils'
 
 export async function astro(
-  options: OptionsOverrides & OptionsStylistic & OptionsFiles = {},
+  options: OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_ASTRO],
     overrides = {},
-    stylistic = true,
   } = options
 
   const [
@@ -42,15 +41,11 @@ export async function astro(
         'astro/no-set-html-directive': 'off',
         'astro/semi': 'off',
 
-        ...stylistic
-          ? {
-              'style/indent': 'off',
-              'style/jsx-closing-tag-location': 'off',
-              'style/jsx-indent': 'off',
-              'style/jsx-one-expression-per-line': 'off',
-              'style/no-multiple-empty-lines': 'off',
-            }
-          : {},
+        'style/indent': 'off',
+        'style/jsx-closing-tag-location': 'off',
+        'style/jsx-indent': 'off',
+        'style/jsx-one-expression-per-line': 'off',
+        'style/no-multiple-empty-lines': 'off',
 
         ...overrides,
       },

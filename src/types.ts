@@ -92,10 +92,6 @@ export interface OptionsHasTypeScript {
   typescript?: boolean
 }
 
-export interface OptionsStylistic {
-  stylistic?: boolean | StylisticConfig
-}
-
 export interface StylisticConfig extends Pick<StylisticCustomizeOptions, 'indent' | 'quotes' | 'jsx' | 'semi'> {
 }
 
@@ -210,13 +206,6 @@ export interface OptionsConfig extends OptionsComponentExts {
    * @default true
    */
   markdown?: boolean | OptionsOverrides
-
-  /**
-   * Enable stylistic rules.
-   *
-   * @default true
-   */
-  stylistic?: boolean | (StylisticConfig & OptionsOverrides)
 
   /**
    * Enable react rules.

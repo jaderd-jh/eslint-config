@@ -1,20 +1,14 @@
 import { ensurePackages, interopDefault } from '../utils'
-import type { OptionsFiles, OptionsHasTypeScript, OptionsOverrides, OptionsStylistic, TypedFlatConfigItem } from '../types'
+import type { OptionsFiles, OptionsHasTypeScript, OptionsOverrides, TypedFlatConfigItem } from '../types'
 import { GLOB_SVELTE } from '../globs'
 
 export async function svelte(
-  options: OptionsHasTypeScript & OptionsOverrides & OptionsStylistic & OptionsFiles = {},
+  options: OptionsHasTypeScript & OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
   const {
     files = [GLOB_SVELTE],
     overrides = {},
-    stylistic = true,
   } = options
-
-  const {
-    indent = 2,
-    quotes = 'single',
-  } = typeof stylistic === 'boolean' ? {} : stylistic
 
   await ensurePackages([
     'eslint-plugin-svelte',
@@ -59,7 +53,14 @@ export async function svelte(
           varsIgnorePattern: '^\\$\\$Props$',
         }],
 
+        'style/indent': 'off', // superseded by svelte/indent
+        'style/no-trailing-spaces': 'off', // superseded by svelte/no-trailing-spaces
         'svelte/comment-directive': 'error',
+        'svelte/derived-has-same-inputs-outputs': 'error',
+        'svelte/html-closing-bracket-spacing': 'error',
+        'svelte/html-quotes': ['error', { prefer: 'single' }],
+        'svelte/indent': ['error', { alignAttributesVertically: true, indent: 2 }],
+        'svelte/mustache-spacing': 'error',
         'svelte/no-at-debug-tags': 'warn',
         'svelte/no-at-html-tags': 'error',
         'svelte/no-dupe-else-if-blocks': 'error',
@@ -73,10 +74,13 @@ export async function svelte(
         'svelte/no-reactive-functions': 'error',
         'svelte/no-reactive-literals': 'error',
         'svelte/no-shorthand-style-property-overrides': 'error',
+        'svelte/no-spaces-around-equal-signs-in-attribute': 'error',
+        'svelte/no-trailing-spaces': 'error',
         'svelte/no-unknown-style-directive-property': 'error',
         'svelte/no-unused-svelte-ignore': 'error',
         'svelte/no-useless-mustaches': 'error',
         'svelte/require-store-callbacks-use-set-param': 'error',
+        'svelte/spaced-html-comment': 'error',
         'svelte/system': 'error',
         'svelte/valid-compile': 'error',
         'svelte/valid-each-key': 'error',
@@ -85,21 +89,6 @@ export async function svelte(
           'error',
           { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^(_|\\$\\$Props$)' },
         ],
-
-        ...stylistic
-          ? {
-              'style/indent': 'off', // superseded by svelte/indent
-              'style/no-trailing-spaces': 'off', // superseded by svelte/no-trailing-spaces
-              'svelte/derived-has-same-inputs-outputs': 'error',
-              'svelte/html-closing-bracket-spacing': 'error',
-              'svelte/html-quotes': ['error', { prefer: quotes }],
-              'svelte/indent': ['error', { alignAttributesVertically: true, indent }],
-              'svelte/mustache-spacing': 'error',
-              'svelte/no-spaces-around-equal-signs-in-attribute': 'error',
-              'svelte/no-trailing-spaces': 'error',
-              'svelte/spaced-html-comment': 'error',
-            }
-          : {},
 
         ...overrides,
       },
