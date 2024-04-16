@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import { isPackageExists } from 'local-pkg'
 import { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Linter } from 'eslint'
-import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types'
+import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
 import {
   astro,
   comments,
@@ -75,7 +75,7 @@ export const defaultPluginRenaming = {
 export function jhqn(
   options: OptionsConfig & TypedFlatConfigItem = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]
-): FlatConfigComposer<TypedFlatConfigItem> {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
     astro: enableAstro = false,
     autoRenamePlugins = true,
@@ -249,7 +249,7 @@ export function jhqn(
   if (Object.keys(fusedConfig).length)
     configs.push([fusedConfig])
 
-  let composer = new FlatConfigComposer<TypedFlatConfigItem>()
+  let composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>()
 
   composer = composer
     .append(
