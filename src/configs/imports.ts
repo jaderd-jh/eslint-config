@@ -38,6 +38,7 @@ export async function imports(): Promise<TypedFlatConfigItem[]> {
         'import/external-module-folders': ['node_modules', 'node_modules/@types'],
         'import/parsers': {
           '@typescript-eslint/parser': ['.d.ts', '.ts', '.tsx'],
+          'espree': ['.js', '.cjs', '.mjs', '.jsx'],
         },
         'import/resolver': {
           node: { extensions: ['.d.ts', '.ts', '.tsx', '.mts', '.cts', '.js', '.jsx', '.mjs', '.cjs'] },
