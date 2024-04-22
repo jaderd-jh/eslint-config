@@ -54,9 +54,9 @@ export async function typescript(
     interopDefault(import('@typescript-eslint/parser')),
   ] as const)
 
-  function makeParser(typeAware: boolean, files: string[], ignores?: string[]): TypedFlatConfigItem {
+  function makeParser(typeAware: boolean, matchFiles: string[], ignores?: string[]): TypedFlatConfigItem {
     return {
-      files,
+      files: matchFiles,
       ...ignores ? { ignores } : {},
       languageOptions: {
         parser: parserTs,
@@ -124,6 +124,7 @@ export async function typescript(
         'ts/no-non-null-assertion': 'off',
         'ts/no-redeclare': 'error',
         'ts/no-require-imports': 'error',
+        'ts/no-shadow': 'error',
         'ts/no-unused-vars': 'off',
         'ts/no-use-before-define': ['error', { classes: false, functions: false, variables: true }],
         'ts/no-useless-constructor': 'off',
