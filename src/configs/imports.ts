@@ -18,7 +18,7 @@ export async function imports(): Promise<TypedFlatConfigItem[]> {
         'import/export': 'error',
         'import/first': 'error',
         'import/no-absolute-path': ['error', { amd: false, commonjs: true, esmodule: true }],
-        'import/no-deprecated': 'warn',
+        // 'import/no-deprecated': 'warn',
         'import/no-duplicates': 'error',
         'import/no-empty-named-blocks': 'error',
         'import/no-mutable-exports': 'error',
