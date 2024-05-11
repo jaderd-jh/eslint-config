@@ -156,6 +156,7 @@ export async function vue(
 
         ...stylistic
           ? {
+              'style/indent': 'off', // superseded by vue/script-indent
               'vue/array-bracket-spacing': ['error', 'never'],
               'vue/arrow-spacing': ['error', { after: true, before: true }],
               'vue/block-spacing': ['error', 'always'],
@@ -187,13 +188,5 @@ export async function vue(
         ...overrides,
       },
     },
-    stylistic
-      ? {
-          files: ['*.vue'],
-          rules: {
-            'style/indent': 'off',
-          },
-        }
-      : {},
   ]
 }
