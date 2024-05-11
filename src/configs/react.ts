@@ -47,11 +47,6 @@ export async function react(
         'react-hooks-extra': plugins['@eslint-react/hooks-extra'],
         'react-naming-convention': plugins['@eslint-react/naming-convention'],
       },
-      settings: {
-        react: {
-          version: 'detect',
-        },
-      },
     },
     {
       files,
