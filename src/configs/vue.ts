@@ -179,7 +179,7 @@ export async function vue(
               'vue/operator-linebreak': ['error', 'before'],
               'vue/padding-line-between-blocks': ['error', 'always'],
               'vue/quote-props': ['error', 'consistent-as-needed'],
-              'vue/script-indent': ['error', 2, { baseIndent: 1 }],
+              'vue/script-indent': ['error', 2, { baseIndent: 1, switchCase: 1 }],
               'vue/space-in-parens': ['error', 'never'],
               'vue/template-curly-spacing': 'error',
             }
