@@ -60,6 +60,22 @@ export async function stylistic(
         ),
 
         'curly': ['error', 'multi-or-nest', 'consistent'],
+        'style/arrow-parens': ['error', 'as-needed'],
+        'style/comma-dangle': 'off',
+        'style/indent-binary-ops': 'off',
+        'style/member-delimiter-style': [
+          'error',
+          {
+            multiline: {
+              delimiter: 'none',
+              requireLast: false,
+            },
+            singleline: {
+              delimiter: 'semi',
+              requireLast: false,
+            },
+          },
+        ],
 
         ...overrides,
       },
