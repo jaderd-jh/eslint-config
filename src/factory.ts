@@ -6,6 +6,7 @@ import type { Linter } from 'eslint'
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
 import {
   astro,
+  command,
   comments,
   // compat,
   ignores,
@@ -131,6 +132,7 @@ export function jhqn(
     }),
     imports(),
     unicorn(),
+    command(),
 
     // Optional plugins (installed but not enabled by default)
     perfectionist(),
