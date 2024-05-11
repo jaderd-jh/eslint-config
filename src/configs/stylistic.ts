@@ -59,7 +59,8 @@ export async function stylistic(
             }
         ),
 
-        'curly': ['error', 'multi-or-nest', 'consistent'],
+        'curly': ['error', 'multi-line', 'consistent'],
+
         'style/arrow-parens': ['error', 'as-needed'],
         'style/brace-style': ['error', '1tbs'],
         'style/comma-dangle': 'off',
