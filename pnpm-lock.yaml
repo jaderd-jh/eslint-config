@@ -177,6 +177,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^4.6.2
         version: 4.6.2(eslint@9.2.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.7
+        version: 0.4.7(eslint@9.2.0)
       eslint-plugin-solid:
         specifier: ^0.14.0
         version: 0.14.0(eslint@9.2.0)(typescript@5.4.5)
@@ -1839,6 +1842,11 @@ packages:
       '@typescript-eslint/parser': ^7.5.0
       eslint: ^8.57.0
       typescript: ^5.3.3
+
+  eslint-plugin-react-refresh@0.4.7:
+    resolution: {integrity: sha512-yrj+KInFmwuQS2UQcg1SF83ha1tuHC1jMQbRNyuWtlEzzKRDgAl7L4Yp4NlDUZTZNlWvHEzOtJhMi40R7JxcSw==}
+    peerDependencies:
+      eslint: '>=7'
 
   eslint-plugin-regexp@2.5.0:
     resolution: {integrity: sha512-I7vKcP0o75WS5SHiVNXN+Eshq49sbrweMQIuqSL3AId9AwDe9Dhbfug65vw64LxmOd4v+yf5l5Xt41y9puiq0g==}
@@ -5468,6 +5476,10 @@ snapshots:
       valibot: 0.30.0
     transitivePeerDependencies:
       - supports-color
+
+  eslint-plugin-react-refresh@0.4.7(eslint@9.2.0):
+    dependencies:
+      eslint: 9.2.0
 
   eslint-plugin-regexp@2.5.0(eslint@9.2.0):
     dependencies:

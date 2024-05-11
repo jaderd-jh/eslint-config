@@ -1,3 +1,4 @@
+import { isPackageExists } from 'local-pkg'
 import { GLOB_TS, GLOB_TSX } from '../globs'
 import type {
   OptionsFiles,
@@ -6,6 +7,20 @@ import type {
   TypedFlatConfigItem,
 } from '../types'
 import { ensurePackages, interopDefault, toArray } from '../utils'
+
+// react refresh
+const ReactRefreshAllowConstantExportPackages = [
+  'vite',
+]
+const RemixPackages = [
+  '@remix-run/node',
+  '@remix-run/react',
+  '@remix-run/serve',
+  '@remix-run/dev',
+]
+const NextJsPackages = [
+  'next',
+]
 
 export async function react(
   options: OptionsTypeScriptWithTypes & OptionsOverrides & OptionsFiles = {},
@@ -18,6 +33,7 @@ export async function react(
   await ensurePackages([
     '@eslint-react/eslint-plugin',
     'eslint-plugin-react-hooks',
+    'eslint-plugin-react-refresh',
   ])
 
   const tsconfigPath = options?.tsconfigPath
@@ -28,12 +44,18 @@ export async function react(
   const [
     pluginReact,
     pluginReactHooks,
+    pluginReactRefresh,
     parserTs,
   ] = await Promise.all([
     interopDefault(import('@eslint-react/eslint-plugin')),
     interopDefault(import('eslint-plugin-react-hooks')),
+    interopDefault(import('eslint-plugin-react-refresh')),
     interopDefault(import('@typescript-eslint/parser')),
   ] as const)
+
+  const isAllowConstantExport = ReactRefreshAllowConstantExportPackages.some(i => isPackageExists(i))
+  const isUsingRemix = RemixPackages.some(i => isPackageExists(i))
+  const isUsingNext = NextJsPackages.some(i => isPackageExists(i))
 
   const plugins = pluginReact.configs.all.plugins
 
@@ -46,6 +68,7 @@ export async function react(
         'react-hooks': pluginReactHooks,
         'react-hooks-extra': plugins['@eslint-react/hooks-extra'],
         'react-naming-convention': plugins['@eslint-react/naming-convention'],
+        'react-refresh': pluginReactRefresh,
       },
     },
     {
@@ -78,6 +101,35 @@ export async function react(
         // recommended rules react-hooks
         'react-hooks/exhaustive-deps': 'warn',
         'react-hooks/rules-of-hooks': 'error',
+
+        // react refresh
+        'react-refresh/only-export-components': [
+          'warn',
+          {
+            allowConstantExport: isAllowConstantExport,
+            allowExportNames: [
+              ...(isUsingNext
+                ? [
+                    'config',
+                    'generateStaticParams',
+                    'metadata',
+                    'generateMetadata',
+                    'viewport',
+                    'generateViewport',
+                  ]
+                : []),
+              ...(isUsingRemix
+                ? [
+                    'meta',
+                    'links',
+                    'headers',
+                    'loader',
+                    'action',
+                  ]
+                : []),
+            ],
+          },
+        ],
 
         // recommended rules from @eslint-react
         'react/ensure-forward-ref-using-ref': 'warn',
