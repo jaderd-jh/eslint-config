@@ -88,6 +88,7 @@ export function jhqn(
     gitignore: enableGitignore = true,
     isInEditor = !!((process.env.VSCODE_PID || process.env.VSCODE_CWD || process.env.JETBRAINS_IDE || process.env.VIM) && !process.env.CI),
     react: enableReact = false,
+    regexp: enableRegexp = true,
     solid: enableSolid = false,
     svelte: enableSvelte = false,
     typescript: enableTypeScript = isPackageExists('typescript'),
@@ -124,7 +125,6 @@ export function jhqn(
       overrides: getOverrides(options, 'javascript'),
     }),
     // compat(),
-    regexp(),
     comments(),
     node(),
     jsdoc({
@@ -137,6 +137,16 @@ export function jhqn(
     // Optional plugins (installed but not enabled by default)
     perfectionist(),
   )
+
+  if (enableRegexp)
+    configs.push(regexp(typeof enableRegexp === 'boolean' ? {} : enableRegexp))
+
+  if (options.test ?? true) {
+    configs.push(test({
+      isInEditor,
+      overrides: getOverrides(options, 'test'),
+    }))
+  }
 
   if (enableVue)
     componentExts.push('vue')
