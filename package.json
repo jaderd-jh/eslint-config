@@ -34,6 +34,7 @@
     "build:inspector": "pnpm build && npx @eslint/config-inspector build",
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
+    "fix:lint": "eslint --fix .",
     "typegen": "esno scripts/typegen.ts",
     "prepack": "pnpm build",
     "updeps": "pnpm up -i --latest -r",

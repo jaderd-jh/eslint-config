@@ -102,18 +102,19 @@ export function jhqn(
       ? options.stylistic
       : {}
 
-  if (stylisticOptions && !('jsx' in stylisticOptions))
+  if (stylisticOptions && !('jsx' in stylisticOptions)) {
     stylisticOptions.jsx = options.jsx ?? true
+  }
 
   const configs: Awaitable<TypedFlatConfigItem[]>[] = []
 
   if (enableGitignore) {
     if (typeof enableGitignore !== 'boolean') {
       configs.push(interopDefault(import('eslint-config-flat-gitignore')).then(r => [r(enableGitignore)]))
-    }
-    else {
-      if (fs.existsSync('.gitignore'))
+    } else {
+      if (fs.existsSync('.gitignore')) {
         configs.push(interopDefault(import('eslint-config-flat-gitignore')).then(r => [r()]))
+      }
     }
   }
 
@@ -138,8 +139,9 @@ export function jhqn(
     perfectionist(),
   )
 
-  if (enableRegexp)
+  if (enableRegexp) {
     configs.push(regexp(typeof enableRegexp === 'boolean' ? {} : enableRegexp))
+  }
 
   if (options.test ?? true) {
     configs.push(test({
@@ -148,8 +150,9 @@ export function jhqn(
     }))
   }
 
-  if (enableVue)
+  if (enableVue) {
     componentExts.push('vue')
+  }
 
   if (enableTypeScript) {
     configs.push(typescript({
@@ -259,12 +262,14 @@ export function jhqn(
   // User can optionally pass a flat config item to the first argument
   // We pick the known keys as ESLint would do schema validation
   const fusedConfig = flatConfigProps.reduce((acc, key) => {
-    if (key in options)
+    if (key in options) {
       acc[key] = options[key] as any
+    }
     return acc
   }, {} as TypedFlatConfigItem)
-  if (Object.keys(fusedConfig).length)
+  if (Object.keys(fusedConfig).length) {
     configs.push([fusedConfig])
+  }
 
   let composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>()
 

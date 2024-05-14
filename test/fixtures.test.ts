@@ -65,7 +65,7 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlat
     const target = resolve('_fixtures', name)
 
     await copy(from, target, {
-      filter: (src) => {
+      filter: src => {
         return !src.includes('node_modules')
       },
     })
@@ -92,13 +92,14 @@ export default jhqn(
       cwd: target,
     })
 
-    await Promise.all(files.map(async (file) => {
+    await Promise.all(files.map(async file => {
       const content = await readFile(join(target, file), 'utf-8')
       const source = await readFile(join(from, file), 'utf-8')
       const outputPath = join(output, file)
       if (content === source) {
-        if (existsSync(outputPath))
+        if (existsSync(outputPath)) {
           remove(outputPath)
+        }
         return
       }
       await expect.soft(content).toMatchFileSnapshot(join(output, file))

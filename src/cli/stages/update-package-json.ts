@@ -32,9 +32,10 @@ export async function updatePackageJson(result: PromtResult) {
           (<const>[
             'eslint-plugin-format',
             result.frameworks.includes('astro') ? 'prettier-plugin-astro' : null,
-          ]).forEach((f) => {
-            if (!f)
+          ]).forEach(f => {
+            if (!f) {
               return
+            }
             pkg.devDependencies[f] = pkgJson.devDependencies[f]
             addedPackages.push(f)
           })
@@ -42,7 +43,7 @@ export async function updatePackageJson(result: PromtResult) {
         case 'unocss':
           (<const>[
             '@unocss/eslint-plugin',
-          ]).forEach((f) => {
+          ]).forEach(f => {
             pkg.devDependencies[f] = pkgJson.devDependencies[f]
             addedPackages.push(f)
           })
@@ -54,15 +55,16 @@ export async function updatePackageJson(result: PromtResult) {
   for (const framework of result.frameworks) {
     const deps = dependenciesMap[framework]
     if (deps) {
-      deps.forEach((f) => {
+      deps.forEach(f => {
         pkg.devDependencies[f] = pkgJson.devDependencies[f]
         addedPackages.push(f)
       })
     }
   }
 
-  if (addedPackages.length)
+  if (addedPackages.length) {
     p.note(`${c.dim(addedPackages.join(', '))}`, 'Added packages')
+  }
 
   await fsp.writeFile(pathPackageJSON, JSON.stringify(pkg, null, 2))
   p.log.success(c.green(`Changes wrote to package.json`))

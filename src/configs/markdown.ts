@@ -13,13 +13,13 @@ export async function markdown(
   } = options
 
   // @ts-expect-error missing types
-  const markdown = await interopDefault(import('eslint-plugin-markdown'))
+  const markdownPlugin = await interopDefault(import('eslint-plugin-markdown'))
 
   return [
     {
       name: 'jhqn/markdown/setup',
       plugins: {
-        markdown,
+        markdown: markdownPlugin,
       },
     },
     {
@@ -30,7 +30,7 @@ export async function markdown(
       // but not the markdown file itself. We use `eslint-merge-processors` to
       // add a pass-through processor for the markdown file itself.
       processor: mergeProcessors([
-        markdown.processors.markdown,
+        markdownPlugin.processors.markdown,
         processorPassThrough,
       ]),
     },
