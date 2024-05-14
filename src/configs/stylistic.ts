@@ -78,6 +78,19 @@ export async function stylistic(
             },
           },
         ],
+        'style/jsx-wrap-multilines': [
+          'error',
+          {
+            arrow: 'parens-new-line',
+            assignment: 'parens-new-line',
+            condition: 'parens-new-line',
+            declaration: 'parens-new-line',
+            logical: 'parens-new-line',
+            prop: 'ignore',
+            propertyValue: 'parens-new-line',
+            return: 'parens-new-line',
+          },
+        ],
 
         ...overrides,
       },
