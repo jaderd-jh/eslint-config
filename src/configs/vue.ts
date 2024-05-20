@@ -106,8 +106,17 @@ export async function vue(
         'vue/block-order': ['error', {
           order: ['script', 'template', 'style'],
         }],
-
-        'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+        'vue/component-name-in-template-casing': [
+          'error',
+          'PascalCase',
+          {
+            /**
+             * 允许使用 kebab-case 命名方式 的组件库 vant | element-plus
+             */
+            ignores: ['/^van-/', '/^el-/', 'component', 'slot'],
+            registeredComponentsOnly: false,
+          },
+        ],
         'vue/component-options-name-casing': ['error', 'PascalCase'],
         // this is deprecated
         'vue/component-tags-order': 'off',
