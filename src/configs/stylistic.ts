@@ -65,17 +65,17 @@ export async function stylistic(
         'style/brace-style': ['error', '1tbs'],
         'style/comma-dangle': 'off',
         'style/indent-binary-ops': 'off',
-        'style/member-delimiter-style': [
+        'style/jsx-sort-props': [
           'error',
           {
-            multiline: {
-              delimiter: 'none',
-              requireLast: false,
-            },
-            singleline: {
-              delimiter: 'semi',
-              requireLast: false,
-            },
+            callbacksLast: true,
+            ignoreCase: true,
+            locale: 'auto',
+            multiline: 'ignore',
+            noSortAlphabetically: false,
+            reservedFirst: true,
+            shorthandFirst: true,
+            shorthandLast: false,
           },
         ],
         'style/jsx-wrap-multilines': [
@@ -89,6 +89,19 @@ export async function stylistic(
             prop: 'ignore',
             propertyValue: 'parens-new-line',
             return: 'parens-new-line',
+          },
+        ],
+        'style/member-delimiter-style': [
+          'error',
+          {
+            multiline: {
+              delimiter: 'none',
+              requireLast: false,
+            },
+            singleline: {
+              delimiter: 'semi',
+              requireLast: false,
+            },
           },
         ],
 
