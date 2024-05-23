@@ -133,6 +133,7 @@ export async function vue(
         'vue/html-self-closing': 'error',
         'vue/max-attributes-per-line': 'off',
         'vue/multi-word-component-names': 'off',
+        'vue/multiline-html-element-content-newline': 'off',
         'vue/no-dupe-keys': 'off',
         'vue/no-empty-pattern': 'error',
         'vue/no-irregular-whitespace': 'error',
