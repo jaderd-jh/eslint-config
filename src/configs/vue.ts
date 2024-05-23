@@ -131,7 +131,7 @@ export async function vue(
         'vue/html-indent': ['error', indent],
         'vue/html-quotes': ['error', 'double'],
         'vue/html-self-closing': 'error',
-        'vue/max-attributes-per-line': 'off',
+        'vue/max-attributes-per-line': ['error', { multiline: 1, singleline: 99 }],
         'vue/multi-word-component-names': 'off',
         'vue/multiline-html-element-content-newline': 'off',
         'vue/no-dupe-keys': 'off',
