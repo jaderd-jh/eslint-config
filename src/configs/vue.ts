@@ -156,6 +156,7 @@ export async function vue(
             ignoreConstructors: false,
           },
         ],
+        'vue/order-in-components': ['error'],
         'vue/prefer-separate-static-class': 'error',
         'vue/prefer-template': 'error',
         'vue/prop-name-casing': ['error', 'camelCase'],
