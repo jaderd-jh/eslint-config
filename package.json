@@ -147,7 +147,7 @@
     "astro-eslint-parser": "^1.0.2",
     "bumpp": "^9.4.1",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "npm:eslint-ts-patch@9.2.0-6",
+    "eslint": "npm:eslint-ts-patch@9.4.0-0",
     "eslint-plugin-astro": "^1.2.0",
     "eslint-plugin-format": "^0.1.1",
     "eslint-plugin-react-hooks": "^4.6.2",
