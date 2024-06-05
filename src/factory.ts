@@ -118,6 +118,9 @@ export function jhqn(
     }
   }
 
+  const typescriptOptions = resolveSubOptions(options, 'typescript')
+  const tsconfigPath = 'tsconfigPath' in typescriptOptions ? typescriptOptions.tsconfigPath : undefined
+
   // Base configs
   configs.push(
     ignores(),
@@ -156,7 +159,7 @@ export function jhqn(
 
   if (enableTypeScript) {
     configs.push(typescript({
-      ...resolveSubOptions(options, 'typescript'),
+      ...typescriptOptions,
       componentExts,
       overrides: getOverrides(options, 'typescript'),
     }))
@@ -189,14 +192,14 @@ export function jhqn(
   if (enableReact) {
     configs.push(react({
       overrides: getOverrides(options, 'react'),
-      tsconfigPath: getOverrides(options, 'typescript').tsconfigPath,
+      tsconfigPath,
     }))
   }
 
   if (enableSolid) {
     configs.push(solid({
       overrides: getOverrides(options, 'solid'),
-      tsconfigPath: getOverrides(options, 'typescript').tsconfigPath,
+      tsconfigPath,
       typescript: !!enableTypeScript,
     }))
   }
