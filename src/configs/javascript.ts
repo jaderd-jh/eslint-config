@@ -35,6 +35,9 @@ export async function javascript(
       linterOptions: {
         reportUnusedDisableDirectives: true,
       },
+      name: 'antfu/javascript/setup',
+    },
+    {
       name: 'jhqn/javascript/rules',
       plugins: {
         'antfu': pluginAntfu,
