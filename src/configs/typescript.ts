@@ -154,7 +154,7 @@ export async function typescript(
         }]
       : [],
     {
-      files: ['**/*.d.([cm])ts'],
+      files: ['**/*.d.?([cm])ts'],
       name: 'jhqn/typescript/disables/dts',
       rules: {
         'eslint-comments/no-unlimited-disable': 'off',
