@@ -65,6 +65,7 @@ export async function stylistic(
         'style/brace-style': ['error', '1tbs'],
         'style/comma-dangle': 'off',
         'style/indent-binary-ops': 'off',
+        'style/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
         'style/jsx-sort-props': [
           'error',
           {
