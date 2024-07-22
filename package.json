@@ -2,7 +2,7 @@
   "name": "@jhqn/eslint-config",
   "type": "module",
   "version": "0.7.9",
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.6.0",
   "description": "jhqn's ESLint config",
   "author": "jade-gjz",
   "license": "MIT",
@@ -55,7 +55,7 @@
     "eslint-plugin-svelte": "^2.39.0",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-slidev": "^1.0.5",
-    "svelte-eslint-parser": "^0.40.0"
+    "svelte-eslint-parser": "^0.41.0"
   },
   "peerDependenciesMeta": {
     "@eslint-react/eslint-plugin": {
@@ -166,7 +166,7 @@
     "rimraf": "^6.0.0",
     "simple-git-hooks": "^2.11.1",
     "svelte": "^4.2.18",
-    "svelte-eslint-parser": "^0.40.0",
+    "svelte-eslint-parser": "^0.41.0",
     "tsup": "^8.1.0",
     "tsx": "^4.15.7",
     "typescript": "^5.5.2",
