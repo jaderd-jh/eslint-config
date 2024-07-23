@@ -2,6 +2,7 @@ import process from 'node:process'
 import { isPackageExists } from 'local-pkg'
 import { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Linter } from 'eslint'
+import type { RuleOptions } from './typegen'
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
 import {
   astro,
@@ -165,6 +166,7 @@ export function jhqn(
       ...typescriptOptions,
       componentExts,
       overrides: getOverrides(options, 'typescript'),
+      type: options.type,
     }))
   }
 
@@ -309,7 +311,7 @@ export function resolveSubOptions<K extends keyof OptionsConfig>(
 export function getOverrides<K extends keyof OptionsConfig>(
   options: OptionsConfig,
   key: K,
-) {
+): Partial<Linter.RulesRecord & RuleOptions> {
   const sub = resolveSubOptions(options, key)
   return {
     ...(options.overrides as any)?.[key],

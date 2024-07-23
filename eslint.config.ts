@@ -10,6 +10,7 @@ export default jhqn(
     svelte: true,
     astro: true,
     typescript: true,
+    type: 'lib',
   },
   {
     ignores: [
