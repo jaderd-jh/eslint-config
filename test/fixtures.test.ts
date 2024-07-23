@@ -98,7 +98,7 @@ export default jhqn(
       const outputPath = join(output, file)
       if (content === source) {
         if (existsSync(outputPath)) {
-          remove(outputPath)
+          await remove(outputPath)
         }
         return
       }

@@ -32,4 +32,8 @@ export default jhqn(
       'style-migrate/migrate': ['error', { namespaceTo: 'style' }],
     },
   },
+).removeRules(
+  'ts/no-unsafe-member-access',
+  'ts/no-unsafe-argument',
+  'ts/no-unsafe-assignment',
 )
