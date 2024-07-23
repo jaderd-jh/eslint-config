@@ -61,6 +61,7 @@ export const GLOB_EXCLUDE = [
   '**/.vitepress/cache',
   '**/.nuxt',
   '**/.next',
+  '**/.svelte-kit',
   '**/.vercel',
   '**/.changeset',
   '**/.idea',
