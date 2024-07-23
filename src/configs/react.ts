@@ -1,5 +1,5 @@
 import { isPackageExists } from 'local-pkg'
-import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../globs'
+import { GLOB_SRC } from '../globs'
 import type {
   OptionsFiles,
   OptionsOverrides,
@@ -26,7 +26,7 @@ export async function react(
   options: OptionsTypeScriptWithTypes & OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
   const {
-    files = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
+    files = [GLOB_SRC],
     overrides = {},
   } = options
 
