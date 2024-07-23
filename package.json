@@ -100,7 +100,6 @@
     "@typescript-eslint/parser": "^8.0.0-alpha.51",
     "eslint-config-flat-gitignore": "^0.1.8",
     "eslint-flat-config-utils": "^0.2.5",
-    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.3.4",
     "eslint-plugin-command": "^0.2.3",
