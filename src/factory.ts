@@ -79,7 +79,7 @@ export const defaultPluginRenaming = {
  */
 export function jhqn(
   options: OptionsConfig & TypedFlatConfigItem = {},
-  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]
+  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
     astro: enableAstro = false,
