@@ -172,12 +172,10 @@
     "vitest": "^2.0.5",
     "vue": "^3.4.38"
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "eslint"
-      ]
-    }
+  "resolutions": {
+    "@eslint-community/eslint-utils": "^4.4.0",
+    "@typescript-eslint/utils": "^8.1.0",
+    "tsx": "~4.17.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
