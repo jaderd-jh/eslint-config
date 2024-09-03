@@ -90,6 +90,7 @@ export function jhqn(
     solid: enableSolid = false,
     svelte: enableSvelte = false,
     typescript: enableTypeScript = isPackageExists('typescript'),
+    unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = false,
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
   } = options
@@ -140,7 +141,6 @@ export function jhqn(
       stylistic: stylisticOptions,
     }),
     imports(),
-    unicorn(),
     command(),
 
     // Optional plugins (installed but not enabled by default)
@@ -156,6 +156,10 @@ export function jhqn(
       isInEditor,
       overrides: getOverrides(options, 'test'),
     }))
+  }
+
+  if (enableUnicorn) {
+    configs.push(unicorn(enableUnicorn === true ? {} : enableUnicorn))
   }
 
   if (enableVue) {
