@@ -18,6 +18,7 @@ export async function typescript(
   const {
     componentExts = [],
     overrides = {},
+    overridesTypeAware = {},
     parserOptions = {},
     type = 'app',
   } = options
@@ -177,8 +178,8 @@ export async function typescript(
           ignores: ignoresTypeAware,
           name: 'jhqn/typescript/rules-type-aware',
           rules: {
-            ...tsconfigPath ? typeAwareRules : {},
-            ...overrides,
+            ...typeAwareRules,
+            ...overridesTypeAware,
           },
         }]
       : [],
