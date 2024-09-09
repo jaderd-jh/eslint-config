@@ -101,7 +101,7 @@
     "@typescript-eslint/parser": "^8.4.0",
     "@vitest/eslint-plugin": "^1.1.0",
     "eslint-config-flat-gitignore": "^0.3.0",
-    "eslint-flat-config-utils": "^0.3.1",
+    "eslint-flat-config-utils": "^0.4.0",
     "eslint-merge-processors": "^0.1.0",
     "eslint-plugin-antfu": "^2.3.6",
     "eslint-plugin-command": "^0.2.3",
