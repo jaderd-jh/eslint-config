@@ -1,6 +1,5 @@
 import type { TypedFlatConfigItem } from '../types'
 import { pluginAntfu, pluginImport } from '../plugins'
-import { GLOB_SRC_EXT } from '../globs'
 
 export async function imports(): Promise<TypedFlatConfigItem[]> {
   return [
@@ -47,14 +46,6 @@ export async function imports(): Promise<TypedFlatConfigItem[]> {
             project: './tsconfig.json',
           },
         },
-      },
-    },
-    {
-      files: ['**/bin/**/*', `**/bin.${GLOB_SRC_EXT}`],
-      name: 'jhqn/imports/disables/bin',
-      rules: {
-        'antfu/no-import-dist': 'off',
-        'antfu/no-import-node-modules-by-path': 'off',
       },
     },
   ]

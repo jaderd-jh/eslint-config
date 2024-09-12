@@ -8,6 +8,7 @@ import {
   command,
   comments,
   // compat,
+  disables,
   ignores,
   imports,
   javascript,
@@ -281,6 +282,10 @@ export function jhqn(
       ),
     )
   }
+
+  configs.push(
+    disables(),
+  )
 
   if ('files' in options) {
     throw new Error('[@jhqn/eslint-config] The first argument should not contain the "files" property as the options are supposed to be global. Place it in the second or later config instead.')
