@@ -1,9 +1,9 @@
 import { existsSync } from 'node:fs'
 import { join, resolve } from 'node:path'
-import { afterAll, beforeAll, it } from 'vitest'
-import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
+import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
+import { afterAll, beforeAll, it } from 'vitest'
 import type { OptionsConfig, TypedFlatConfigItem } from '../src'
 
 beforeAll(async () => {
