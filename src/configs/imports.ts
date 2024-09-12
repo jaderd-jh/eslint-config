@@ -28,8 +28,6 @@ export async function imports(): Promise<TypedFlatConfigItem[]> {
         //   { caseSensitive: true, caseSensitiveStrict: true, commonjs: true, ignore: ['^virtual:', '^uno.css$'] },
         // ],
         'import/no-webpack-loader-syntax': 'error',
-
-        'import/order': 'error',
       },
       settings: {
         'import/docstyle': ['jsdoc'],
