@@ -1,3 +1,4 @@
+import type { ExtraLibrariesOption, FrameworkOption, PromItem, PromptResult } from './types'
 /* eslint-disable perfectionist/sort-objects */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -9,7 +10,6 @@ import { updateEslintFiles } from './stages/update-eslint-files'
 import { updatePackageJson } from './stages/update-package-json'
 import { updateVscodeSettings } from './stages/update-vscode-settings'
 import { isGitClean } from './utils'
-import type { ExtraLibrariesOption, FrameworkOption, PromItem, PromptResult } from './types'
 
 export interface CliRunOptions {
   /**

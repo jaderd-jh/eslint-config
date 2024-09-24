@@ -1,5 +1,5 @@
-import { pluginEcmascriptCompat } from '../plugins'
 import type { TypedFlatConfigItem } from '../types'
+import { pluginEcmascriptCompat } from '../plugins'
 
 /**
  * For ecma version compatibility checks.

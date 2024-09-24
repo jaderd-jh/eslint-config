@@ -1,10 +1,10 @@
+import type { OptionsConfig, TypedFlatConfigItem } from '../src'
 import { existsSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { execa } from 'execa'
 import fg from 'fast-glob'
 import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
 import { afterAll, beforeAll, it } from 'vitest'
-import type { OptionsConfig, TypedFlatConfigItem } from '../src'
 
 beforeAll(async () => {
   await rm('_fixtures', { recursive: true, force: true })

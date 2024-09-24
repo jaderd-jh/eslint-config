@@ -1,3 +1,4 @@
+import type { PromptResult } from '../types'
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
@@ -7,7 +8,6 @@ import * as p from '@clack/prompts'
 import parse from 'parse-gitignore'
 import c from 'picocolors'
 import { getEslintConfigContent } from '../utils'
-import type { PromptResult } from '../types'
 
 export async function updateEslintFiles(result: PromptResult): Promise<void> {
   const cwd = process.cwd()
