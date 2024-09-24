@@ -143,7 +143,7 @@ export async function typescript(
         'ts/no-import-type-side-effects': 'error',
         'ts/no-invalid-void-type': 'off',
         'ts/no-non-null-assertion': 'off',
-        'ts/no-redeclare': 'error',
+        'ts/no-redeclare': ['error', { builtinGlobals: false }],
         'ts/no-require-imports': 'error',
         'ts/no-shadow': 'error',
         'ts/no-unused-expressions': ['error', {
