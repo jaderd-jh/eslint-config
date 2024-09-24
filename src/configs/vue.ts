@@ -103,6 +103,7 @@ export async function vue(
             },
 
         'node/prefer-global/process': 'off',
+        'ts/explicit-function-return-type': 'off',
         'vue/attributes-order': ['error', { alphabetical: true }],
         'vue/block-order': ['error', {
           order: ['script', 'template', 'style'],
