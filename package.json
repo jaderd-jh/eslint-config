@@ -157,7 +157,7 @@
     "execa": "^9.4.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "jiti": "^1.21.6",
+    "jiti": "^2.0.0",
     "lint-staged": "^15.2.10",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-slidev": "^1.0.5",
