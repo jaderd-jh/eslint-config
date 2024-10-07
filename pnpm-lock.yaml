@@ -1591,6 +1591,7 @@ packages:
   eslint-plugin-ecmascript-compat@3.2.1:
     resolution: {integrity: sha512-ONunl+ucRFb9yarnVJSLzrmTYBdaWvUgzq6lXEk4OjIEV+CVxmMt9agZzzk5Ev/kaOHdkhsidAzyAS4sxEFfdg==}
     engines: {node: '>=16.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       eslint: '>=8'
 
