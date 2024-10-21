@@ -163,7 +163,7 @@
     "prettier-plugin-slidev": "^1.0.5",
     "rimraf": "^6.0.0",
     "simple-git-hooks": "^2.11.1",
-    "svelte": "^4.2.19",
+    "svelte": "^5.0.0",
     "svelte-eslint-parser": "^0.43.0",
     "tsup": "^8.3.0",
     "tsx": "^4.19.0",
