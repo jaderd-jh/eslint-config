@@ -73,6 +73,22 @@ runWithConfig(
   },
 )
 
+// https://github.com/antfu/eslint-config/issues/618
+runWithConfig(
+  'ts-strict-with-react',
+  {
+    typescript: {
+      tsconfigPath: './tsconfig.json',
+    },
+    react: true,
+  },
+  {
+    rules: {
+      'ts/no-unsafe-return': ['off'],
+    },
+  },
+)
+
 function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlatConfigItem[]) {
   it.concurrent(name, async ({ expect }) => {
     const from = resolve('fixtures/input')
