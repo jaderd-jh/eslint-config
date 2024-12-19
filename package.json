@@ -1,7 +1,7 @@
 {
   "name": "@jhqn/eslint-config",
   "type": "module",
-  "version": "0.7.23",
+  "version": "0.7.24",
   "packageManager": "pnpm@9.15.0",
   "description": "jhqn's ESLint config",
   "author": "jade-gjz",
