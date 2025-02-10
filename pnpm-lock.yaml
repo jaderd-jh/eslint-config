@@ -178,8 +178,8 @@ importers:
         specifier: 9.8.0-1
         version: 9.8.0-1(jiti@2.4.2)
       eslint-typegen:
-        specifier: ^0.3.2
-        version: 0.3.2(eslint@9.17.0(jiti@2.4.2))
+        specifier: ^1.0.0
+        version: 1.0.0(eslint@9.17.0(jiti@2.4.2))
       esno:
         specifier: ^4.8.0
         version: 4.8.0
@@ -2095,8 +2095,8 @@ packages:
     resolution: {integrity: sha512-bn+PRzcFdUX/V53Z2V8MVE6gq0CZG7q76Fr7g7lGyCSlQlVH2KJs0adN33xnvizizstQjYycDvwByXhIZJb88A==}
     hasBin: true
 
-  eslint-typegen@0.3.2:
-    resolution: {integrity: sha512-YD/flDDDYoBszomo6wVAJ01HcEWTLfOb04+Mwir8/oR66t2bnajw+qUI6JfBoBQO3HbebcCmEtgjKgWVB67ggQ==}
+  eslint-typegen@1.0.0:
+    resolution: {integrity: sha512-1Dku9Ljb/lBjpuI2tT5VZPTivPirs+fjrAnoXSy97BDMIs6fcz8nOqajv/zzPrSxtiRINxz/DymGLn4X+Oiksg==}
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0
 
@@ -5730,7 +5730,7 @@ snapshots:
       - jiti
       - supports-color
 
-  eslint-typegen@0.3.2(eslint@9.17.0(jiti@2.4.2)):
+  eslint-typegen@1.0.0(eslint@9.17.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.17.0(jiti@2.4.2)
       json-schema-to-typescript-lite: 14.1.0
