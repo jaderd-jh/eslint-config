@@ -3,7 +3,9 @@ import { jhqn } from './src'
 
 export default jhqn(
   {
-    vue: true,
+    vue: {
+      a11y: true,
+    },
     react: true,
     solid: true,
     svelte: true,

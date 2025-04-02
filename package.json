@@ -50,6 +50,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-solid": "^0.14.5",
     "eslint-plugin-svelte": "^2.46.1",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-slidev": "^1.0.5",
     "svelte-eslint-parser": "^0.43.0"
@@ -77,6 +78,9 @@
       "optional": true
     },
     "eslint-plugin-svelte": {
+      "optional": true
+    },
+    "eslint-plugin-vuejs-accessibility": {
       "optional": true
     },
     "prettier-plugin-astro": {
@@ -144,7 +148,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-solid": "^0.14.5",
     "eslint-plugin-svelte": "^3.5.0",
-    "eslint-ts-patch": "9.8.0-1",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "eslint-typegen": "^2.1.0",
     "esno": "^4.8.0",
     "execa": "^9.5.2",
