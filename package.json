@@ -99,6 +99,7 @@
     "@typescript-eslint/parser": "^8.23.0",
     "@vitest/eslint-plugin": "^1.1.27",
     "ansis": "^3.17.0",
+    "cac": "^6.7.14",
     "eslint-config-flat-gitignore": "^2.0.0",
     "eslint-flat-config-utils": "^2.0.1",
     "eslint-merge-processors": "^2.0.0",
@@ -123,8 +124,7 @@
     "parse-gitignore": "^2.0.0",
     "toml-eslint-parser": "^0.10.0",
     "vue-eslint-parser": "^9.4.3",
-    "yaml-eslint-parser": "^1.2.3",
-    "yargs": "^17.7.2"
+    "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
     "@antfu/ni": "^24.0.0",
@@ -135,7 +135,6 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.1",
     "@types/prompts": "^2.4.9",
-    "@types/yargs": "^17.0.33",
     "@unocss/eslint-plugin": "^66.0.0",
     "astro-eslint-parser": "^1.2.1",
     "bumpp": "^10.0.2",

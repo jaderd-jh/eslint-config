@@ -1,5 +1,5 @@
-import type { ExtraLibrariesOption, FrameworkOption, PromptResult } from './types'
 /* eslint-disable perfectionist/sort-objects */
+import type { ExtraLibrariesOption, FrameworkOption, PromptResult } from './types'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
@@ -28,15 +28,15 @@ export interface CliRunOptions {
 
 export async function run(options: CliRunOptions = {}): Promise<void> {
   const argSkipPrompt = !!process.env.SKIP_PROMPT || options.yes
-  const argTemplate = <FrameworkOption[]>options.frameworks?.map(m => m.trim())
-  const argExtra = <ExtraLibrariesOption[]>options.extra?.map(m => m.trim())
+  const argTemplate = <FrameworkOption[]>options.frameworks?.map(m => m?.trim()).filter(Boolean)
+  const argExtra = <ExtraLibrariesOption[]>options.extra?.map(m => m?.trim()).filter(Boolean)
 
   if (fs.existsSync(path.join(process.cwd(), 'eslint.config.js'))) {
     p.log.warn(c.yellow`eslint.config.js already exists, migration wizard exited.`)
     return process.exit(1)
   }
 
-  // Set default value for promtResult if `argSkipPromt` is enabled
+  // Set default value for promptResult if `argSkipPrompt` is enabled
   let result: PromptResult = {
     extra: argExtra ?? [],
     frameworks: argTemplate ?? [],
