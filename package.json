@@ -170,7 +170,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --flag unstable_ts_config --cache --fix"
+    "*": "eslint --fix"
   },
   "$schema": "https://json.schemastore.org/package.json"
 }
