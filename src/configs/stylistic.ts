@@ -64,6 +64,7 @@ export async function stylistic(
         'style/arrow-parens': ['error', 'as-needed'],
         'style/brace-style': ['error', '1tbs'],
         'style/comma-dangle': 'off',
+        'style/generator-star-spacing': ['error', { after: true, before: false }],
         'style/indent-binary-ops': 'off',
         'style/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
         'style/jsx-sort-props': [
@@ -105,6 +106,7 @@ export async function stylistic(
             },
           },
         ],
+        'style/yield-star-spacing': ['error', { after: true, before: false }],
 
         ...overrides,
       },

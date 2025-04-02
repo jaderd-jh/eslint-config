@@ -1,5 +1,5 @@
 // Define a TypeScript interface
-interface Person { 
+interface Person {
   name: string; age: number;
 }
 
@@ -7,7 +7,7 @@ interface Person {
 const people: Person[] = [
   { name: 'Alice', age: 30 },
  { name: 'Bob', age: 25 },
-  { name: 'Charlie', 
+  { name: 'Charlie',
   age: 35 }
 ];
 
@@ -37,7 +37,7 @@ interface Car {
 
 // Create objects using the interface
 const car1: Car = { make: 'Toyota' };
-const car2:  Car = { 
+const car2:  Car = {
   make: 'Ford', model: 'Focus' };
 
 // Use union types
@@ -78,3 +78,13 @@ var fn = (): string => {
 
 log(car1, car2, favoriteFruit, numericValue, fn())
 
+// Generator
+export function* generator1() {
+  let id = 0;
+  while (id < 100) {
+    yield id++;
+  }
+}
+export function * generator2() {
+  yield* generator1()
+}
