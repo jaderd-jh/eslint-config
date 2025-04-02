@@ -1,16 +1,15 @@
-import type { OptionsConfig, TypedFlatConfigItem } from '../src'
-import { existsSync } from 'node:fs'
+import type { OptionsConfig, TypedFlatConfigItem } from '../src/types'
+import fs from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import { execa } from 'execa'
-import fg from 'fast-glob'
-import { copy, readFile, remove, rm, writeFile } from 'fs-extra'
+import { glob } from 'tinyglobby'
 import { afterAll, beforeAll, it } from 'vitest'
 
 beforeAll(async () => {
-  await rm('_fixtures', { recursive: true, force: true })
+  await fs.rm('_fixtures', { recursive: true, force: true })
 })
 afterAll(async () => {
-  await rm('_fixtures', { recursive: true, force: true })
+  await fs.rm('_fixtures', { recursive: true, force: true })
 })
 
 runWithConfig('js', {
@@ -95,12 +94,13 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlat
     const output = resolve('fixtures/output', name)
     const target = resolve('_fixtures', name)
 
-    await copy(from, target, {
+    await fs.cp(from, target, {
+      recursive: true,
       filter: src => {
         return !src.includes('node_modules')
       },
     })
-    await writeFile(join(target, 'eslint.config.js'), `
+    await fs.writeFile(join(target, 'eslint.config.js'), `
 // @eslint-disable
 import jhqn from '@jhqn/eslint-config'
 
@@ -115,7 +115,7 @@ export default jhqn(
       stdio: 'pipe',
     })
 
-    const files = await fg('**/*', {
+    const files = await glob('**/*', {
       ignore: [
         'node_modules',
         'eslint.config.js',
@@ -124,13 +124,11 @@ export default jhqn(
     })
 
     await Promise.all(files.map(async file => {
-      const content = await readFile(join(target, file), 'utf-8')
-      const source = await readFile(join(from, file), 'utf-8')
+      const content = await fs.readFile(join(target, file), 'utf-8')
+      const source = await fs.readFile(join(from, file), 'utf-8')
       const outputPath = join(output, file)
       if (content === source) {
-        if (existsSync(outputPath)) {
-          await remove(outputPath)
-        }
+        await fs.rm(outputPath, { force: true })
         return
       }
       await expect.soft(content).toMatchFileSnapshot(join(output, file))
