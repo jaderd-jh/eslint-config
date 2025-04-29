@@ -52,6 +52,22 @@ const VuePackages = [
   '@slidev/cli',
 ]
 
+const ReactPackages = [
+  'react',
+  'react-dom',
+  'next',
+]
+
+const SolidPackages = [
+  'solid-js',
+  'solid-start',
+]
+
+const SveltePackages = [
+  'svelte',
+  '@sveltejs/kit',
+]
+
 export const defaultPluginRenaming = {
   '@eslint-react': 'react',
   '@eslint-react/dom': 'react-dom',
@@ -86,10 +102,10 @@ export function jhqn(
     componentExts = [],
     gitignore: enableGitignore = true,
     jsx: enableJsx = true,
-    react: enableReact = false,
+    react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     regexp: enableRegexp = true,
-    solid: enableSolid = false,
-    svelte: enableSvelte = false,
+    solid: enableSolid = SolidPackages.some(i => isPackageExists(i)),
+    svelte: enableSvelte = SveltePackages.some(i => isPackageExists(i)),
     typescript: enableTypeScript = isPackageExists('typescript'),
     unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = false,
