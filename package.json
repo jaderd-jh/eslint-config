@@ -55,7 +55,7 @@
     "eslint-processor-vue-blocks": "^2.0.0",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-slidev": "^1.0.5",
-    "svelte-eslint-parser": "^0.43.0",
+    "svelte-eslint-parser": "^1.0.0",
     "vue-eslint-parser": "^10.1.3"
   },
   "peerDependenciesMeta": {
