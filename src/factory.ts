@@ -108,7 +108,7 @@ export function jhqn(
     svelte: enableSvelte = SveltePackages.some(i => isPackageExists(i)),
     typescript: enableTypeScript = isPackageExists('typescript'),
     unicorn: enableUnicorn = true,
-    unocss: enableUnoCSS = false,
+    unocss: enableUnoCSS = isPackageExists('unocss'),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
   } = options
 
