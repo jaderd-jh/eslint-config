@@ -19,7 +19,7 @@ export async function stylistic(
   const {
     indent,
     jsx,
-    lessOpinionated = false,
+    lessOpinionated = true,
     overrides = {},
     quotes,
     semi,
