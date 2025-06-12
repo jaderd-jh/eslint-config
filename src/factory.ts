@@ -97,7 +97,7 @@ export function jhqn(
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
-    astro: enableAstro = false,
+    astro: enableAstro = isPackageExists('astro'),
     autoRenamePlugins = true,
     componentExts = [],
     gitignore: enableGitignore = true,
