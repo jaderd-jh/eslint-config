@@ -2,7 +2,7 @@
   "name": "@jhqn/eslint-config",
   "type": "module",
   "version": "0.9.5",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "description": "jhqn's ESLint config",
   "author": "jade-gjz",
   "license": "MIT",
