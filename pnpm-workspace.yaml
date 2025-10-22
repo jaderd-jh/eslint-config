@@ -1,2 +1,10 @@
 packages:
   - 'fixtures/*'
+
+strictPeerDependencies: false
+preferFrozenLockfile: false
+shamefullyHoist: true
+ignoreWorkspaceRootCheck: true
+shellEmulator: true
+dedupeDirectDeps: true
+managePackageManagerVersions: true
