@@ -11,6 +11,9 @@ export default jhqn(
     astro: true,
     typescript: true,
     type: 'lib',
+    jsx: {
+      a11y: true
+    }
   },
   {
     ignores: [

@@ -8,7 +8,7 @@ export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatCo
   } = options
   return [
     {
-      name: 'antfu/unicorn/rules',
+      name: 'jhqn/unicorn/rules',
       plugins: {
         unicorn: pluginUnicorn,
       },

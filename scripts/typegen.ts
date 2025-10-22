@@ -44,7 +44,7 @@ const configs = await combine(
   javascript(),
   jsdoc(),
   jsonc(),
-  jsx(),
+  jsx({ a11y: true }),
   markdown(),
   node(),
   perfectionist(),
