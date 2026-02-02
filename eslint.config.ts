@@ -12,14 +12,11 @@ export default jhqn(
     typescript: true,
     type: 'lib',
     jsx: {
-      a11y: true
-    }
+      a11y: true,
+    },
   },
   {
-    ignores: [
-      'fixtures',
-      '_fixtures',
-    ],
+    ignores: ['fixtures', '_fixtures'],
   },
   {
     files: ['src/**/*.ts'],

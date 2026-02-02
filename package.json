@@ -1,8 +1,9 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "@jhqn/eslint-config",
   "type": "module",
   "version": "0.10.0",
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.28.1",
   "description": "jhqn's ESLint config",
   "author": "jade-gjz",
   "license": "MIT",
@@ -32,7 +33,7 @@
     "watch": "tsdown --watch",
     "lint": "eslint",
     "fix:lint": "eslint --fix",
-    "typegen": "esno scripts/typegen.ts",
+    "typegen": "tsx scripts/typegen.ts",
     "prepack": "pnpm build",
     "updeps": "pnpm up -i --latest -r",
     "release": "bumpp",
@@ -168,7 +169,6 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "eslint-processor-vue-blocks": "^2.0.0",
     "eslint-typegen": "^2.3.0",
-    "esno": "^4.8.0",
     "execa": "^9.6.0",
     "jiti": "^2.6.1",
     "lint-staged": "^16.2.6",
@@ -203,6 +203,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "$schema": "https://json.schemastore.org/package.json"
+  }
 }
