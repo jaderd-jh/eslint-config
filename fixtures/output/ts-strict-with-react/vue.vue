@@ -7,7 +7,7 @@
   const doubled = computed(() => counter.value * 2)
 
   // Define a function
-  function incrementCounter() {
+  const incrementCounter = () => {
     counter.value++
   }
 

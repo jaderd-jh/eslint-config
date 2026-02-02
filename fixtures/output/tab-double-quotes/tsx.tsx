@@ -5,13 +5,12 @@ export function Component1() {
 export function jsx2() {
 	const props = { a: 1, b: 2 }
 	return (
-		<a foo="bar" bar="foo">
+		<a bar="foo" foo="bar">
 			<div
 				{...props}
 				a={1}
 				b="2"
-			>
-				Inline Text
+			>Inline Text
 			</div>
 			<Component1>
 				Block Text

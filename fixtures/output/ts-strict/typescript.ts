@@ -20,7 +20,7 @@ for (const person of people) {
 }
 
 // Define a generic function
-function identity< T >(arg: T): T {
+function identity<T>(arg: T): T {
   return arg
 }
 
@@ -77,8 +77,19 @@ class Dog extends Animal {
 const dog = new Dog('Buddy')
 dog.bark()
 
-function fn(): string {
+const fn = (): string => {
   return `hello${1}`
 }
 
 log(car1, car2, favoriteFruit, numericValue, fn())
+
+// Generator
+export function* generator1() {
+  let id = 0
+  while (id < 100) {
+    yield id++
+  }
+}
+export function* generator2() {
+  yield* generator1()
+}

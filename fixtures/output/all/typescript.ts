@@ -8,24 +8,25 @@ interface Person {
 const people: Person[] = [
   { name: 'Alice', age: 30 },
   { name: 'Bob', age: 25 },
-  { name: 'Charlie', age: 35 },
+  { name: 'Charlie', age: 35 }
 ]
 
 // eslint-disable-next-line no-console
 const log = console.log
 
 // Use a for...of loop to iterate over the array
-for (const person of people)
+for (const person of people) {
   log(`Hello, my name is ${person.name} and I am ${person.age} years old.`)
+}
 
 // Define a generic function
-function identity< T >(arg: T): T {
+function identity<T>(arg: T): T {
   return arg
 }
 
 // Use the generic function with type inference
 const result = identity(
-  'TypeScript is awesome',
+  'TypeScript is awesome'
 )
 log(result)
 
@@ -39,7 +40,7 @@ interface Car {
 const car1: Car = { make: 'Toyota' }
 const car2: Car = {
   make: 'Ford',
-  model: 'Focus',
+  model: 'Focus'
 }
 
 // Use union types
@@ -76,8 +77,19 @@ class Dog extends Animal {
 const dog = new Dog('Buddy')
 dog.bark()
 
-function fn(): string {
+const fn = (): string => {
   return `hello${1}`
 }
 
 log(car1, car2, favoriteFruit, numericValue, fn())
+
+// Generator
+export function* generator1() {
+  let id = 0
+  while (id < 100) {
+    yield id++
+  }
+}
+export function* generator2() {
+  yield* generator1()
+}

@@ -6,7 +6,7 @@
   const counter = ref<number | 1>(0)
 
   // Define a function
-  function incrementCounter() {
+  const incrementCounter = () => {
     counter.value++
   }
 </script>

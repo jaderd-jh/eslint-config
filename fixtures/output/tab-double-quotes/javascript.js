@@ -27,11 +27,11 @@ class Person {
 const people = [
 	new Person("Alice", 30),
 	new Person("Bob", 25),
-	new Person("Charlie", 35),
+	new Person("Charlie", 35)
 ]
 
 // Use the forEach method to iterate over the array
-people.forEach((person) => {
+people.forEach(person => {
 	person.sayHello()
 })
 
@@ -54,8 +54,7 @@ log(newNumbers)
 try {
 	// Attempt to parse an invalid JSON string
 	JSON.parse("invalid JSON")
-}
-catch (error) {
+} catch (error) {
 	console.error("Error parsing JSON:", error.message)
 }
 
@@ -72,8 +71,9 @@ setTimeout(() => {
 let a, b, c, d, foo
 
 if (a
-	|| b
-	|| c || d
-	|| (d && b)
-)
+  || b
+      || c || d
+        || (d && b)
+) {
 	foo()
+}
