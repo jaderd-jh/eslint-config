@@ -9,7 +9,9 @@ export default jhqn(
     solid: true,
     svelte: true,
     astro: true,
-    typescript: true,
+    typescript: {
+      erasableOnly: true,
+    },
     type: 'lib',
     jsx: {
       a11y: true,

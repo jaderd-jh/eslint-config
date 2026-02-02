@@ -1,67 +1,40 @@
 import fs from 'node:fs/promises'
 import JS from '@eslint/js'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
-import {
-  astro,
-  combine,
-  comments,
-  // compat,
-  imports,
-  javascript,
-  jsdoc,
-  jsonc,
-  jsx,
-  markdown,
-  node,
-  perfectionist,
-  react,
-  regexp,
-  solid,
-  sortPackageJson,
-  stylistic,
-  svelte,
-  test,
-  toml,
-  typescript,
-  unicorn,
-  unocss,
-  vue,
-  yaml,
-} from '../src'
+import { jhqn } from '../src/factory'
 
-const configs = await combine(
-  {
-    plugins: {
-      '': {
-        rules: JS.configs.all,
-      },
+const configs = await jhqn({
+  astro: true,
+  gitignore: true,
+  jsx: {
+    a11y: true,
+  },
+  jsonc: true,
+  markdown: true,
+  react: true,
+  regexp: true,
+  solid: true,
+  stylistic: true,
+  svelte: true,
+  test: true,
+  toml: true,
+  typescript: {
+    tsconfigPath: 'tsconfig.json',
+    erasableOnly: true,
+  },
+  unicorn: true,
+  unocss: true,
+  vue: {
+    a11y: true,
+  },
+  yaml: true,
+}).prepend({
+  plugins: {
+    '': {
+      rules: JS.configs.all,
     },
   },
-  astro(),
-  comments(),
-  // compat(),
-  imports(),
-  javascript(),
-  jsdoc(),
-  jsonc(),
-  jsx({ a11y: true }),
-  markdown(),
-  node(),
-  perfectionist(),
-  react(),
-  regexp(),
-  solid(),
-  sortPackageJson(),
-  stylistic(),
-  svelte(),
-  test(),
-  toml(),
-  typescript(),
-  unicorn(),
-  unocss(),
-  vue(),
-  yaml(),
-)
+})
 
 const configNames = configs.map(i => i.name).filter(Boolean) as string[]
 
