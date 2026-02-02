@@ -102,7 +102,9 @@ export function jhqn(
     componentExts = [],
     gitignore: enableGitignore = true,
     ignores: userIgnores = [],
+    jsdoc: enableJsdoc = true,
     jsx: enableJsx = true,
+    node: enableNode = true,
     react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     regexp: enableRegexp = true,
     solid: enableSolid = SolidPackages.some(i => isPackageExists(i)),
@@ -129,7 +131,7 @@ export function jhqn(
       : {}
 
   if (stylisticOptions && !('jsx' in stylisticOptions)) {
-    stylisticOptions.jsx = enableJsx
+    stylisticOptions.jsx = typeof enableJsx === 'object' ? true : enableJsx
   }
 
   const configs: Awaitable<TypedFlatConfigItem[]>[] = []
@@ -160,16 +162,26 @@ export function jhqn(
     }),
     // compat(),
     comments(),
-    node(),
-    jsdoc({
-      stylistic: stylisticOptions,
-    }),
     imports(),
     command(),
 
     // Optional plugins (installed but not enabled by default)
     perfectionist(),
   )
+
+  if (enableNode) {
+    configs.push(
+      node(),
+    )
+  }
+
+  if (enableJsdoc) {
+    configs.push(
+      jsdoc({
+        stylistic: stylisticOptions,
+      }),
+    )
+  }
 
   if (enableRegexp) {
     configs.push(regexp(typeof enableRegexp === 'boolean' ? {} : enableRegexp))
