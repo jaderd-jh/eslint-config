@@ -194,6 +194,10 @@ export interface OptionsUnoCSS extends OptionsOverrides {
   strict?: boolean
 }
 
+export interface OptionsReact extends OptionsOverrides {
+  reactCompiler?: boolean
+}
+
 export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {
   /**
    * Enable gitignore support.
@@ -339,7 +343,7 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
    *
    * @default false
    */
-  react?: boolean | OptionsOverrides
+  react?: boolean | OptionsReact
 
   /**
    * Enable solid rules.
