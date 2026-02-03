@@ -20,8 +20,8 @@
     "./cli": "./dist/cli.mjs",
     "./package.json": "./package.json"
   },
-  "types": "./dist/index.d.ts",
-  "bin": "./bin/index.js",
+  "types": "./dist/index.d.mts",
+  "bin": "./bin/index.mjs",
   "files": [
     "bin",
     "dist"
