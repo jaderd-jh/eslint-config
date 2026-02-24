@@ -1,34 +1,10 @@
 import fs from 'node:fs/promises'
 import JS from '@eslint/js'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
+import { CONFIG_PRESET_FULL_ON } from '../src/config-presets'
 import { jhqn } from '../src/factory'
 
-const configs = await jhqn({
-  astro: true,
-  gitignore: true,
-  jsx: {
-    a11y: true,
-  },
-  jsonc: true,
-  markdown: true,
-  react: true,
-  regexp: true,
-  solid: true,
-  stylistic: true,
-  svelte: true,
-  test: true,
-  toml: true,
-  typescript: {
-    tsconfigPath: 'tsconfig.json',
-    erasableOnly: true,
-  },
-  unicorn: true,
-  unocss: true,
-  vue: {
-    a11y: true,
-  },
-  yaml: true,
-}).prepend({
+const configs = await jhqn(CONFIG_PRESET_FULL_ON).prepend({
   plugins: {
     '': {
       rules: JS.configs.all,
