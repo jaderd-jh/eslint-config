@@ -1,10 +1,15 @@
 import type { TypedFlatConfigItem } from '../types'
-import { GLOB_EXCLUDE } from '../globs'
+import { GLOB_EXCLUDE, GLOB_TS, GLOB_TSX } from '../globs'
 
-export async function ignores(userIgnores: string[] | ((originals: string[]) => string[]) = []): Promise<TypedFlatConfigItem[]> {
+export async function ignores(userIgnores: string[] | ((originals: string[]) => string[]) = [], ignoreTypeScript = false): Promise<TypedFlatConfigItem[]> {
+  // eslint-disable-next-line ts/no-shadow
   let ignores = [
     ...GLOB_EXCLUDE,
   ]
+
+  if (ignoreTypeScript) {
+    ignores.push(GLOB_TS, GLOB_TSX)
+  }
 
   if (typeof userIgnores === 'function') {
     ignores = userIgnores(ignores)
