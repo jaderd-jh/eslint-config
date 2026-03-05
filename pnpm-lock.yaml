@@ -42,8 +42,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0
       cac:
-        specifier: ^6.7.14
-        version: 6.7.14
+        specifier: ^7.0.0
+        version: 7.0.0
       eslint-config-flat-gitignore:
         specifier: ^2.2.1
         version: 2.2.1(eslint@9.39.3(jiti@2.6.1))
@@ -1462,6 +1462,10 @@ packages:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
 
+  cac@7.0.0:
+    resolution: {integrity: sha512-tixWYgm5ZoOD+3g6UTea91eow5z6AAHaho3g0V9CNSNb45gM8SmflpAc+GRd1InC4AqN/07Unrgp56Y94N9hJQ==}
+    engines: {node: '>=20.19.0'}
+
   cached-factory@0.1.0:
     resolution: {integrity: sha512-IGOSWu+NuED5UzCRmBeqQPZ8z7SkgrD/nN67W2iY1Qv83CVhevyMexkGclJ86saXisIqxoOnbeiTWvsCHRqJBw==}
     engines: {node: '>=18'}
@@ -1588,6 +1592,7 @@ packages:
   conventional-changelog-cli@5.0.0:
     resolution: {integrity: sha512-9Y8fucJe18/6ef6ZlyIlT2YQUbczvoQZZuYmDLaGvcSBP+M6h+LAvf7ON7waRxKJemcCII8Yqu5/8HEfskTxJQ==}
     engines: {node: '>=18'}
+    deprecated: This package is no longer maintained. Please use the conventional-changelog package instead.
     hasBin: true
 
   conventional-changelog-codemirror@5.0.0:
@@ -2300,11 +2305,13 @@ packages:
   git-raw-commits@5.0.0:
     resolution: {integrity: sha512-I2ZXrXeOc0KrCvC7swqtIFXFN+rbjnC7b2T943tvemIOVNl+XP8YnA9UVwqFhzzLClnSA60KR/qEjLpXzs73Qg==}
     engines: {node: '>=18'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   git-semver-tags@8.0.0:
     resolution: {integrity: sha512-N7YRIklvPH3wYWAR2vysaqGLPRcpwQ0GKdlqTiVN5w1UmCdaeY3K8s6DMKRCh54DDdzyt/OAB6C8jgVtb7Y2Fg==}
     engines: {node: '>=18'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-slugger@2.0.0:
@@ -4967,6 +4974,8 @@ snapshots:
       rc9: 2.1.2
 
   cac@6.7.14: {}
+
+  cac@7.0.0: {}
 
   cached-factory@0.1.0: {}
 
