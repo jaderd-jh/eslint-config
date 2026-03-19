@@ -1,13 +1,18 @@
 import type { TypedFlatConfigItem } from '../types'
+import { GLOB_SRC } from '../globs'
 import { pluginNode } from '../plugins'
 
 export async function node(): Promise<TypedFlatConfigItem[]> {
   return [
     {
-      name: 'jhqn/node/rules',
+      name: 'jhqn/node/setup',
       plugins: {
         node: pluginNode,
       },
+    },
+    {
+      files: [GLOB_SRC],
+      name: 'jhqn/node/rules',
       rules: {
         'node/handle-callback-err': ['error', '^(err|error)$'],
         'node/no-deprecated-api': 'error',
