@@ -112,7 +112,7 @@ export function jhqn(
     solid: enableSolid = SolidPackages.some(i => isPackageExists(i)),
     svelte: enableSvelte = SveltePackages.some(i => isPackageExists(i)),
     type: appType = 'app',
-    typescript: enableTypeScript = isPackageExists('typescript'),
+    typescript: enableTypeScript = isPackageExists('typescript') || isPackageExists('@typescript/native-preview'),
     unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = isPackageExists('unocss'),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
