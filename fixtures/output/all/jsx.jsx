@@ -1,3 +1,4 @@
+const PATTERN = /\.\d+/g
 export function HelloWorld({
   greeting = 'hello',
   greeted = '"World"',
@@ -9,7 +10,7 @@ export function HelloWorld({
   };
 
   // TODO: Don't use random in render
-  const num = Math.floor (Math.random() * 1e+7).toString().replace(/\.\d+/g, '')
+  const num = Math.floor (Math.random() * 1e+7).toString().replace(PATTERN, '')
 
   return (
     <div className="HelloWorld" title={`You are visitor number ${num}`} onMouseOver={onMouseOver}>
