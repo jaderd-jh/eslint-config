@@ -33,6 +33,28 @@ export async function perfectionist(): Promise<TypedFlatConfigItem[]> {
           order: 'asc',
           type: 'natural',
         }],
+        'perfectionist/sort-jsx-props': [
+          'error',
+          {
+            customGroups: [
+              {
+                elementNamePattern: '^(key|ref|children|dangerouslySetInnerHTML)$',
+                groupName: 'reserved',
+                selector: 'prop',
+              },
+              {
+                elementNamePattern: '^on[A-Z]',
+                groupName: 'callback',
+                selector: 'prop',
+              },
+            ],
+            groups: ['reserved', 'shorthand-prop', 'prop', 'callback'],
+            ignoreCase: true,
+            locales: 'en-US',
+            order: 'asc',
+            type: 'alphabetical',
+          },
+        ],
         'perfectionist/sort-named-exports': ['error', { order: 'asc', type: 'natural' }],
         'perfectionist/sort-named-imports': ['error', { order: 'asc', type: 'natural' }],
       },

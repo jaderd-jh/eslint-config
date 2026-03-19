@@ -75,19 +75,6 @@ export async function stylistic(
         'style/generator-star-spacing': ['error', { after: true, before: false }],
         'style/indent-binary-ops': 'off',
         'style/jsx-one-expression-per-line': ['error', { allow: 'non-jsx' }],
-        'style/jsx-sort-props': [
-          'error',
-          {
-            callbacksLast: true,
-            ignoreCase: true,
-            locale: 'auto',
-            multiline: 'ignore',
-            noSortAlphabetically: false,
-            reservedFirst: true,
-            shorthandFirst: true,
-            shorthandLast: false,
-          },
-        ],
         'style/jsx-wrap-multilines': [
           'error',
           {
