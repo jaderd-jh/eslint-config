@@ -7,6 +7,8 @@ import * as p from '@clack/prompts'
 import { green } from 'ansis'
 import { vscodeSettingsString } from '../constants'
 
+const LAST_LINE_PATTERN = /\s*\}$/
+
 export async function updateVscodeSettings(result: PromptResult): Promise<void> {
   const cwd = process.cwd()
 
@@ -27,7 +29,7 @@ export async function updateVscodeSettings(result: PromptResult): Promise<void> 
   } else {
     let settingsContent = await fsp.readFile(settingsPath, 'utf8')
 
-    settingsContent = settingsContent.trim().replace(/\s*\}$/, '')
+    settingsContent = settingsContent.trim().replace(LAST_LINE_PATTERN, '')
     settingsContent += settingsContent.endsWith(',') || settingsContent.endsWith('{') ? '' : ','
     settingsContent += `${vscodeSettingsString}}\n`
 

@@ -9,6 +9,7 @@ import {
   comments,
   // compat,
   disables,
+  e18e,
   ignores,
   imports,
   javascript,
@@ -100,6 +101,7 @@ export function jhqn(
     astro: enableAstro = isPackageExists('astro'),
     autoRenamePlugins = true,
     componentExts = [],
+    e18e: enableE18e = true,
     gitignore: enableGitignore = true,
     ignores: userIgnores = [],
     jsdoc: enableJsdoc = true,
@@ -109,6 +111,7 @@ export function jhqn(
     regexp: enableRegexp = true,
     solid: enableSolid = SolidPackages.some(i => isPackageExists(i)),
     svelte: enableSvelte = SveltePackages.some(i => isPackageExists(i)),
+    type: appType = 'app',
     typescript: enableTypeScript = isPackageExists('typescript'),
     unicorn: enableUnicorn = true,
     unocss: enableUnoCSS = isPackageExists('unocss'),
@@ -194,6 +197,15 @@ export function jhqn(
     }))
   }
 
+  if (enableE18e) {
+    configs.push(
+      e18e({
+        isInEditor,
+        ...enableE18e === true ? {} : enableE18e,
+      }),
+    )
+  }
+
   if (enableUnicorn) {
     configs.push(unicorn(enableUnicorn === true ? {} : enableUnicorn))
   }
@@ -211,7 +223,7 @@ export function jhqn(
       ...typescriptOptions,
       componentExts,
       overrides: getOverrides(options, 'typescript'),
-      type: options.type,
+      type: appType,
     }))
   }
 

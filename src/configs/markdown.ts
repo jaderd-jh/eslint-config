@@ -81,6 +81,8 @@ export async function markdown(
       },
       name: 'jhqn/markdown/disables/code',
       rules: {
+        'e18e/prefer-static-regex': 'off',
+
         'import/newline-after-import': 'off',
 
         'no-alert': 'off',

@@ -20,6 +20,7 @@ export async function updatePackageJson(result: PromptResult): Promise<void> {
   pkg.devDependencies['@jhqn/eslint-config'] = `^${pkgJson.version}`
   pkg.devDependencies.eslint ??= pkgJson.devDependencies.eslint
     .replace('npm:eslint-ts-patch@', '')
+    // eslint-disable-next-line e18e/prefer-static-regex
     .replace(/-\d+$/, '')
 
   const addedPackages: string[] = []
