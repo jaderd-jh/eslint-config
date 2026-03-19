@@ -12,6 +12,7 @@ export default jhqn(
     typescript: {
       erasableOnly: true,
     },
+    markdown: true,
     type: 'lib',
     jsx: {
       a11y: true,

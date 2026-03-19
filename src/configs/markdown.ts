@@ -1,15 +1,17 @@
-import type { OptionsComponentExts, OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types'
+import type { OptionsComponentExts, OptionsFiles, OptionsMarkdown, TypedFlatConfigItem } from '../types'
 import { mergeProcessors, processorPassThrough } from 'eslint-merge-processors'
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE, GLOB_MARKDOWN_IN_MARKDOWN } from '../globs'
-import { interopDefault, parserPlain } from '../utils'
+import { interopDefault } from '../utils'
 
 export async function markdown(
-  options: OptionsFiles & OptionsComponentExts & OptionsOverrides = {},
+  options: OptionsFiles & OptionsComponentExts & OptionsMarkdown = {},
 ): Promise<TypedFlatConfigItem[]> {
   const {
     componentExts = [],
     files = [GLOB_MARKDOWN],
+    gfm = true,
     overrides = {},
+    overridesMarkdown = {},
   } = options
 
   const markdownPlugin = await interopDefault(import('@eslint/markdown'))
@@ -35,10 +37,34 @@ export async function markdown(
     },
     {
       files,
-      languageOptions: {
-        parser: parserPlain,
-      },
+      language: gfm ? 'markdown/gfm' : 'markdown/commonmark',
       name: 'jhqn/markdown/parser',
+    },
+    {
+      files,
+      name: 'jhqn/markdown/rules',
+      rules: {
+        ...markdownPlugin.configs.recommended.at(0)?.rules,
+        // https://github.com/eslint/markdown/issues/294
+        'markdown/no-missing-label-refs': 'off',
+        ...overridesMarkdown,
+      },
+    },
+    {
+      files,
+      name: 'jhqn/markdown/disables/markdown',
+      rules: {
+        // Disable rules do not work with markdown sourcecode.
+        'command/command': 'off',
+        'no-irregular-whitespace': 'off',
+        'perfectionist/sort-exports': 'off',
+        'perfectionist/sort-imports': 'off',
+        'regexp/no-legacy-features': 'off',
+        'regexp/no-missing-g-flag': 'off',
+        'regexp/no-useless-dollar-replacements': 'off',
+        'regexp/no-useless-flag': 'off',
+        'style/indent': 'off',
+      },
     },
     {
       files: [
@@ -52,7 +78,7 @@ export async function markdown(
           },
         },
       },
-      name: 'jhqn/markdown/disables',
+      name: 'jhqn/markdown/disables/code',
       rules: {
         'import/newline-after-import': 'off',
 
