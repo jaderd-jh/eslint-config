@@ -116,7 +116,7 @@
     "@clack/prompts": "^1.1.0",
     "@e18e/eslint-plugin": "^0.2.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
-    "@eslint/markdown": "^7.5.1",
+    "@eslint/markdown": "^8.0.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@typescript-eslint/eslint-plugin": "^8.57.1",
     "@typescript-eslint/parser": "^8.57.1",
