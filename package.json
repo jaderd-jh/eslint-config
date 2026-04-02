@@ -175,7 +175,7 @@
     "tinyglobby": "^0.2.15",
     "tsdown": "^0.21.7",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.0",
     "vitest": "^4.1.2",
     "vue": "^3.5.31",
     "vue-eslint-parser": "^10.4.0"
