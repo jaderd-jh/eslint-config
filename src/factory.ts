@@ -72,8 +72,9 @@ const SveltePackages = [
 export const defaultPluginRenaming = {
   '@eslint-react': 'react',
   '@eslint-react/dom': 'react-dom',
-  '@eslint-react/hooks-extra': 'react-hooks-extra',
   '@eslint-react/naming-convention': 'react-naming-convention',
+  '@eslint-react/rsc': 'react-rsc',
+  '@eslint-react/web-api': 'react-web-api',
   '@stylistic': 'style',
   '@typescript-eslint': 'ts',
   'es-syntax': 'ecmascript-compat',
