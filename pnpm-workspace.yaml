@@ -8,3 +8,4 @@ ignoreWorkspaceRootCheck: true
 shellEmulator: true
 dedupeDirectDeps: true
 managePackageManagerVersions: true
+dedupePeers: true
