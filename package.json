@@ -3,7 +3,7 @@
   "name": "@jhqn/eslint-config",
   "type": "module",
   "version": "0.14.1",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.2",
   "description": "jhqn's ESLint config",
   "author": "jade-gjz",
   "license": "MIT",
@@ -110,7 +110,7 @@
   "dependencies": {
     "@antfu/install-pkg": "^1.1.0",
     "@clack/prompts": "^1.2.0",
-    "@e18e/eslint-plugin": "^0.3.0",
+    "@e18e/eslint-plugin": "^0.4.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@eslint/markdown": "^8.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
