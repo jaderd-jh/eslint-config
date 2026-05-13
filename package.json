@@ -120,7 +120,7 @@
     "ansis": "^4.2.0",
     "cac": "^7.0.0",
     "eslint-config-flat-gitignore": "^2.3.0",
-    "eslint-flat-config-utils": "^3.1.0",
+    "eslint-flat-config-utils": "^3.2.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-antfu": "^3.2.2",
     "eslint-plugin-command": "^3.5.2",
@@ -188,10 +188,10 @@
   },
   "inlinedDependencies": {
     "@eslint-community/eslint-utils": "4.9.1",
-    "@typescript-eslint/scope-manager": "8.58.1",
-    "@typescript-eslint/types": "8.58.1",
-    "@typescript-eslint/utils": "8.58.1",
-    "@typescript-eslint/visitor-keys": "8.58.1",
+    "@typescript-eslint/scope-manager": "8.58.2",
+    "@typescript-eslint/types": "8.58.2",
+    "@typescript-eslint/utils": "8.58.2",
+    "@typescript-eslint/visitor-keys": "8.58.2",
     "cached-factory": "0.1.0",
     "eslint-plugin-erasable-syntax-only": "0.4.0",
     "eslint-visitor-keys": [
