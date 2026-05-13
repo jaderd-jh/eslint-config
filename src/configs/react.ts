@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-objects */
 import type {
   OptionsFiles,
   OptionsReact,
@@ -75,11 +74,7 @@ export async function react(
       name: 'jhqn/react/setup',
       plugins: {
         'react': plugins['@eslint-react'],
-        'react-dom': plugins['@eslint-react/dom'],
-        'react-naming-convention': plugins['@eslint-react/naming-convention'],
         'react-refresh': pluginReactRefresh,
-        'react-rsc': plugins['@eslint-react/rsc'],
-        'react-web-api': plugins['@eslint-react/web-api'],
       },
     },
     {
@@ -95,8 +90,6 @@ export async function react(
       name: 'jhqn/react/rules',
       rules: {
         ...pluginReact.configs.recommended.rules,
-
-        'react/prefer-namespace-import': 'error',
 
         // preconfigured rules from eslint-plugin-react-refresh https://github.com/ArnaudBarre/eslint-plugin-react-refresh/tree/main/src
         'react-refresh/only-export-components': [
@@ -154,8 +147,8 @@ export async function react(
       name: 'jhqn/react/typescript',
       rules: {
         // Disables rules that are already handled by TypeScript
-        'react-dom/no-string-style-prop': 'off',
-        'react-dom/no-unknown-property': 'off',
+        'react/dom-no-string-style-prop': 'off',
+        'react/dom-no-unknown-property': 'off',
       },
     },
     ...isTypeAware
