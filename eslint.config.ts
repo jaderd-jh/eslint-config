@@ -13,6 +13,7 @@ export default jhqn(
       erasableOnly: true,
     },
     markdown: true,
+    perfectionist: true,
     type: 'lib',
     jsx: {
       a11y: true,

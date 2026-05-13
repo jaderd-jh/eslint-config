@@ -109,6 +109,7 @@ export function jhqn(
     jsdoc: enableJsdoc = true,
     jsx: enableJsx = true,
     node: enableNode = true,
+    perfectionist: enablePerfectionist = true,
     react: enableReact = ReactPackages.some(i => isPackageExists(i)),
     regexp: enableRegexp = true,
     solid: enableSolid = SolidPackages.some(i => isPackageExists(i)),
@@ -170,9 +171,15 @@ export function jhqn(
     imports(),
     command(),
 
-    // Optional plugins (installed but not enabled by default)
-    perfectionist(),
   )
+
+  if (enablePerfectionist) {
+    configs.push(
+      perfectionist({
+        overrides: getOverrides(options, 'perfectionist'),
+      }),
+    )
+  }
 
   if (enableNode) {
     configs.push(

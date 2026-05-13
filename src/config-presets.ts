@@ -11,9 +11,8 @@ export const CONFIG_PRESET_FULL_ON: OptionsConfig = {
   },
   markdown: true,
   node: true,
-  react: {
-    reactCompiler: true,
-  },
+  perfectionist: true,
+  react: true,
   regexp: true,
   solid: true,
   stylistic: {

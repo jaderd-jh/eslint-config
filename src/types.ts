@@ -319,6 +319,13 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
   unicorn?: boolean | OptionsUnicorn
 
   /**
+   * Options for eslint-plugin-perfectionist.
+   *
+   * @default true
+   */
+  perfectionist?: boolean | OptionsOverrides
+
+  /**
    * Enable test support.
    *
    * @default true
