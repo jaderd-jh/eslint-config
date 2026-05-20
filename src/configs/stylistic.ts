@@ -3,7 +3,7 @@ import { pluginAntfu } from '../plugins'
 import { interopDefault } from '../utils'
 
 export const StylisticConfigDefaults: StylisticConfig = {
-  braceStyle: 'stroustrup',
+  braceStyle: '1tbs',
   experimental: false,
   indent: 2,
   jsx: true,
