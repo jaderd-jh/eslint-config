@@ -1,4 +1,5 @@
 import type { OptionsUnicorn, TypedFlatConfigItem } from '../types'
+import { GLOB_SRC } from '../globs'
 import { pluginUnicorn } from '../plugins'
 
 export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatConfigItem[]> {
@@ -8,10 +9,14 @@ export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatCo
   } = options
   return [
     {
-      name: 'jhqn/unicorn/rules',
+      name: 'jhqn/unicorn/setup',
       plugins: {
         unicorn: pluginUnicorn,
       },
+    },
+    {
+      files: [GLOB_SRC],
+      name: 'jhqn/unicorn/rules',
       rules: {
         ...(allRecommended
           ? pluginUnicorn.configs.recommended.rules as any
