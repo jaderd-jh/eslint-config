@@ -150,7 +150,7 @@
     "@types/node": "^24.13.2",
     "@unocss/eslint-plugin": "^66.7.5",
     "astro-eslint-parser": "^2.1.0",
-    "bumpp": "^11.1.0",
+    "bumpp": "^12.0.0",
     "eslint": "^10.6.0",
     "eslint-plugin-astro": "^2.1.1",
     "eslint-plugin-erasable-syntax-only": "^0.4.2",
