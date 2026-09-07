@@ -1,7 +1,7 @@
 import type { OptionsConfig, TypedFlatConfigItem } from '../src/types'
 import fs from 'node:fs/promises'
 import { join, resolve } from 'node:path'
-import { execa } from 'execa'
+import { x } from 'tinyexec'
 import { glob } from 'tinyglobby'
 import { afterAll, beforeAll, it } from 'vitest'
 
@@ -113,9 +113,12 @@ export default jhqn(
 )
   `)
 
-    await execa('npx', ['eslint', '.', '--fix'], {
-      cwd: target,
-      stdio: 'pipe',
+    await x('npx', ['eslint', '.', '--fix'], {
+      throwOnError: true,
+      nodeOptions: {
+        cwd: target,
+        stdio: 'pipe',
+      }
     })
 
     const files = await glob('**/*', {

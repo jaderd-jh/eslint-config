@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import { join } from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
-import { execa } from 'execa'
+import { x } from 'tinyexec'
 import { afterAll, beforeEach, expect, it } from 'vitest'
 
 const CLI_PATH = fileURLToPath(new URL('../bin/index.mjs', import.meta.url))
@@ -16,12 +16,15 @@ async function run(params: string[] = [], env = {
   SKIP_PROMPT: '1',
   NO_COLOR: '1',
 }) {
-  return execa('node', [CLI_PATH, ...params], {
-    cwd: genPath,
-    env: {
-      ...process.env,
-      ...env,
-    },
+  return x('node', [CLI_PATH, ...params], {
+    throwOnError: true,
+    nodeOptions: {
+      cwd: genPath,
+      env: {
+        ...process.env,
+        ...env,
+      },
+    }
   })
 };
 
