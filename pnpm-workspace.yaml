@@ -8,6 +8,11 @@ ignoreWorkspaceRootCheck: true
 shellEmulator: true
 dedupeDirectDeps: true
 dedupePeers: true
+cleanupUnusedCatalogs: true
+minimumReleaseAgeStrict: true
+minimumReleaseAgeExcludePrune: true
+trustLockfile: true
+trustPolicy: no-downgrade
 allowBuilds:
   esbuild: false
   simple-git-hooks: false
