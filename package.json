@@ -151,7 +151,7 @@
     "@jhqn/eslint-config": "workspace:*",
     "@stylistic/eslint-plugin-migrate": "^4.4.1",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-    "@types/node": "^24.13.3",
+    "@types/node": "^26.0.0",
     "@unocss/eslint-plugin": "^66.10.0",
     "astro-eslint-parser": "^3.1.0",
     "bumpp": "^12.3.0",
