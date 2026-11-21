@@ -117,7 +117,7 @@
     "@e18e/eslint-plugin": "^0.8.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@eslint/markdown": "^8.0.3",
-    "@stylistic/eslint-plugin": "^5.10.0",
+    "@stylistic/eslint-plugin": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^8.69.0",
     "@typescript-eslint/parser": "^8.69.0",
     "@vitest/eslint-plugin": "^1.6.27",
